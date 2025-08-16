@@ -8,9 +8,7 @@ html {
 }
 
 body {
-  background: #fff;
-  font: 400 12px/1.8 "Open Sans", sans-serif;
-  color: #666;
+  font: 400 12px/1.8 "Roboto", sans-serif;
   -webkit-font-smoothing: antialiased;
 }
 
@@ -646,130 +644,6 @@ a,
 /*--------------------------------------------------------------
 	Buttons
 --------------------------------------------------------------*/
-.btn {
-  border-radius: 0;
-  font-family: "Roboto Condensed", sans-serif;
-  text-transform: uppercase;
-  letter-spacing: 2px;
-  font-size: 11px;
-  padding: 8px 37px;
-}
-
-.btn.active.focus,
-.btn.active:focus,
-.btn.focus,
-.btn:active.focus,
-.btn:active:focus,
-.btn:focus {
-  outline: 0;
-}
-
-.btn.btn-round {
-  border-radius: 2px;
-}
-
-.btn.btn-circle {
-  border-radius: 30px;
-}
-
-.btn.btn-w {
-  background: rgba(255, 255, 255, 0.8);
-  color: #111;
-}
-
-.btn.btn-w:hover,
-.btn.btn-w:focus {
-  background: white;
-  color: #111;
-}
-
-.btn.btn-g {
-  background: #e5e5e5;
-  color: #111;
-}
-
-.btn.btn-g:hover,
-.btn.btn-g:focus {
-  background: #d8d8d8;
-  color: #111;
-}
-
-.btn.btn-border-w {
-  background: transparent;
-  border: 1px solid rgba(255, 255, 255, 0.75);
-  color: #fff;
-}
-
-.btn.btn-border-w:hover,
-.btn.btn-border-w:focus {
-  background: #fff;
-  border-color: transparent;
-  color: #111;
-}
-
-.btn.btn-d {
-  background: rgba(17, 17, 17, 0.8);
-  color: #fff;
-}
-
-.btn.btn-d:hover,
-.btn.btn-d:focus {
-  background: #111111;
-}
-
-.btn.btn-b {
-  background: #111111;
-  color: #fff;
-}
-
-.btn.btn-b:hover,
-.btn.btn-b:focus {
-  background: rgba(17, 17, 17, 0.8);
-}
-
-.btn-border-d {
-  background: transparent;
-  border: 1px solid #111111;
-  color: #111;
-}
-
-.btn.btn-border-d:hover,
-.btn.btn-border-d:focus {
-  background: #111111;
-  color: #fff;
-}
-
-.btn.btn-font-w {
-  background: rgba(255, 255, 255, 0.8);
-  color: #fff;
-}
-
-.btn.btn-font-w:hover {
-  background: #fff;
-  color: #111;
-}
-
-/* Buttons size */
-.btn.btn-lg {
-  padding: 12px 45px;
-  font-size: 13px;
-}
-
-.btn.btn-sm {
-  padding: 6px 25px;
-  font-size: 10px;
-  letter-spacing: 1px;
-}
-
-.btn.btn-xs {
-  padding: 4px 19px;
-  font-size: 10px;
-  letter-spacing: 0;
-}
-
-.btn-list .btn {
-  margin: 5px 0;
-}
 
 .search-btn {
   position: absolute;
@@ -874,7 +748,15 @@ a:hover, a:focus {
 h1, h2, h3, h4, h5, h6 {
   line-height: 1.4;
   font-weight: 400;
+  font-family: "Roboto", sans-serif;
 }
+
+h1 { font-size: 2.5rem; }
+h2 { font-size: 2rem; }
+h3 { font-size: 1.75rem; }
+h4 { font-size: 1.5rem; }
+h5 { font-size: 1.25rem; }
+h6 { font-size: 1rem; }
 
 p, ol, ul, blockquote {
   margin: 0 0 20px;
@@ -888,13 +770,13 @@ blockquote {
 }
 
 .font-alt {
-  font-family: "Roboto Condensed", sans-serif;
+  font-family: "Roboto", sans-serif;
   text-transform: uppercase;
   letter-spacing: 2px;
 }
 
 .font-serif {
-  font-family: Volkhov, "Times New Roman", sans-serif;
+  font-family: "Roboto", sans-serif;
   font-style: italic;
 }
 
@@ -908,18 +790,16 @@ blockquote {
 
 .module-title {
   position: relative;
-  letter-spacing: 4px;
+  letter-spacing: 1px;
   text-align: center;
-  font-weight: 400;
-  font-size: 30px;
-  color: #111;
+  font-weight: 500;
+  font-size: 24px;
   margin: 0 0 70px;
 }
 
 .module-subtitle {
   text-align: center;
   font-size: 16px;
-  color: #111;
   margin-bottom: 70px;
 }
 
@@ -1238,101 +1118,6 @@ General Styles - Owlcarousel
 /*--------------------------------------------------------------
 	Navbar
 --------------------------------------------------------------*/
-.navbar-custom {
-  background-color: rgba(10, 10, 10, 0.9);
-  border: 0;
-  border-radius: 0;
-  z-index: 1000;
-  font-family: "Roboto Condensed", sans-serif;
-  text-transform: uppercase;
-  letter-spacing: 3px;
-  font-size: 11px;
-  transition: background, padding 0.4s ease-in-out 0s;
-}
-
-.navbar a {
-  transition: color 0.125s ease-in-out 0s;
-}
-
-.navbar-custom .dropdown-menu {
-  background: rgba(26, 26, 26, 0.9);
-  border-radius: 0;
-  border: 0;
-  padding: 0;
-  box-shadow: none;
-}
-
-.navbar-custom .navbar-brand {
-  letter-spacing: 4px;
-  font-weight: 400;
-  font-size: 22px;
-  color: #fff;
-}
-
-.navbar-custom .nav li > a {
-  position: relative;
-  color: rgba(255, 255, 255, 0.7);
-}
-
-.navbar-custom .dropdown-menu > li > a {
-  border-bottom: 1px solid rgba(73, 71, 71, 0.15) !important;
-  padding: 11px 15px;
-  letter-spacing: 2px;
-  color: #999;
-}
-
-.navbar-custom .dropdown-menu .dropdown-menu {
-  border-left: 1px solid rgba(73, 71, 71, 0.15);
-  left: 100%;
-  right: auto;
-  top: 0;
-  margin-top: 0;
-}
-
-.navbar-custom .dropdown-menu.left-side .dropdown-menu {
-  border: 0;
-  border-right: 1px solid rgba(73, 71, 71, 0.15);
-  right: 100%;
-  left: auto;
-}
-
-.navbar-custom .nav > li > a:focus,
-.navbar-custom .nav > li > a:hover,
-.navbar-custom .nav .open > a,
-.navbar-custom .nav .open > a:focus,
-.navbar-custom .nav .open > a:hover,
-.navbar-custom .dropdown-menu > li > a:focus,
-.navbar-custom .dropdown-menu > li > a:hover {
-  background: none;
-  color: #fff;
-}
-
-.navbar-custom .dropdown-menu > li > a:hover {
-  background: rgba(255, 255, 255, 0.1) !important;
-}
-
-.navbar-custom .dropdown-toggle:after {
-  position: absolute;
-  display: block;
-  right: 0;
-  top: 50%;
-  margin-top: -6px;
-  font: normal normal normal 14px/1 FontAwesome;
-  font-size: 9px;
-  content: "\f107";
-  text-rendering: auto;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
-.navbar-custom .navbar-toggle .icon-bar {
-  background: #fff;
-}
-
-.dropdown-menu {
-  min-width: 180px;
-  font-size: 11px;
-}
 
 /* Navbar search
 
@@ -1506,10 +1291,12 @@ General Styles - Owlcarousel
 	Footer
 --------------------------------------------------------------*/
 .footer {
+  background-color: var(--md-sys-color-surface-variant);
   padding: 10px 0;
 }
 
 .footer .copyright {
+  color: var(--md-sys-color-on-surface-variant);
   margin: 0;
 }
 
@@ -1543,31 +1330,7 @@ Google map
 /*--------------------------------------------------------------
 	Services & Features
 --------------------------------------------------------------*/
-.features-item {
-  margin: 20px 0;
-  text-align: center;
-}
 
-.specialties-image{
-  width: 600px; /* Define the width of the image */
-  height: 250px;
-}
-.features-icon,
-.alt-features-icon {
-  line-height: 1.2;
-  font-size: 42px;
-  color: #111;
-}
-
-.features-title,
-.alt-features-title {
-  text-transform: uppercase;
-  letter-spacing: 2px;
-  font-weight: 400;
-  font-size: 14px;
-  color: #111;
-  margin: 16px 0 15px;
-}
 
 .alt-features-item {
   position: relative;
