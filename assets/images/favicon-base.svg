@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <style>
+      .logo-icon-primary { fill: #6750A4; }
+      .logo-icon-accent { fill: #625B71; }
+      .logo-connection { stroke: #6750A4; stroke-width: 4; fill: none; }
+    </style>
+  </defs>
+  
+  <!-- Background for better visibility on light/dark themes -->
+  <rect width="64" height="64" fill="#FFFFFF" rx="12" />
+  
+  <!-- Simplified Tech Icon -->
+  <g>
+    <!-- Connection lines -->
+    <line class="logo-connection" x1="24" y1="20" x2="32" y2="32" />
+    <line class="logo-connection" x1="24" y1="44" x2="32" y2="32" />
+    <line class="logo-connection" x1="32" y1="32" x2="40" y2="32" />
+    
+    <!-- Simplified nodes -->
+    <!-- Left node -->
+    <circle class="logo-icon-primary" cx="24" cy="32" r="8" />
+    <circle class="logo-icon-accent" cx="24" cy="32" r="4" />
+    
+    <!-- Top node -->
+    <circle class="logo-icon-accent" cx="32" cy="20" r="6" />
+    <circle class="logo-icon-primary" cx="32" cy="20" r="3" />
+    
+    <!-- Bottom node -->
+    <circle class="logo-icon-accent" cx="32" cy="44" r="6" />
+    <circle class="logo-icon-primary" cx="32" cy="44" r="3" />
+    
+    <!-- Right node -->
+    <circle class="logo-icon-primary" cx="40" cy="32" r="8" />
+    <circle class="logo-icon-accent" cx="40" cy="32" r="4" />
+  </g>
+</svg>
