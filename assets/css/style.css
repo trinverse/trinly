@@ -149,7 +149,11 @@ a,
 
 /* Sections */
 .navbar-custom + .main {
-  margin-top: 50px;
+  margin-top: 70px;
+}
+
+.navbar-custom {
+  min-height: 70px;
 }
 
 .main {
@@ -2775,4 +2779,18 @@ Google map
   .partner-logo-placeholder span {
     font-size: 36px !important;
   }
+}
+
+/* Custom Trinly Logo */
+.navbar-brand {
+  padding: 10px 15px;
+}
+
+.navbar-brand img {
+  height: 50px;
+  transition: all 0.3s ease;
+}
+
+.navbar-brand img:hover {
+  opacity: 0.8;
 }

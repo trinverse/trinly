@@ -26,7 +26,8 @@
     <link rel="icon" type="image/png" sizes="32x32" href="assets/images/favicons/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="96x96" href="assets/images/favicons/favicon-96x96.png">
     <link rel="icon" type="image/png" sizes="16x16" href="assets/images/favicons/favicon-16x16.png">
-    <link rel="manifest" href="/manifest.json">
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+    <link rel="manifest" href="site.webmanifest">
     <meta name="msapplication-TileColor" content="#ffffff">
     <meta name="msapplication-TileImage" content="assets/images/favicons/ms-icon-144x144.png">
     <meta name="theme-color" content="#ffffff">
@@ -62,7 +63,7 @@
       <nav class="navbar navbar-custom navbar-fixed-top" role="navigation">
         <div class="container">
           <div class="navbar-header">
-            <button class="navbar-toggle" type="button" data-toggle="collapse" data-target="#custom-collapse"><span class="sr-only">Toggle navigation</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button><a class="navbar-brand" href="index.html">Trinly</a>
+            <button class="navbar-toggle" type="button" data-toggle="collapse" data-target="#custom-collapse"><span class="sr-only">Toggle navigation</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button><a class="navbar-brand" href="index.html"><img src="assets/images/logo.svg" alt="Trinly Logo" style="height: 40px;"/></a>
           </div>
           <div class="collapse navbar-collapse" id="custom-collapse">
             <ul class="nav navbar-nav navbar-right">
@@ -76,11 +77,33 @@
           </div>
         </div>
       </nav>
-      <section class="home-section home-full-height bg-dark-30" id="home" name="home" data-background="assets/chicago-night.gif">
-        <div class="titan-caption">
-          <div class="caption-content">
-            <div class="font-alt mb-30 titan-title-size-1">Technology made Personal</div>
-            <div class="font-alt mb-40 titan-title-size-3"><span class="rotate">We are technology driven | We are business driven | We are people driven | We are Trinly</span></div><a class="section-scroll btn btn-border-w" href="#services">Learn More</a>
+      <!-- Material 3 Hero Section -->
+      <section class="material-hero" id="home" name="home">
+        <!-- Animated Background Shapes -->
+        <div class="material-shapes">
+          <div class="shape shape-1"></div>
+          <div class="shape shape-2"></div>
+          <div class="shape shape-3"></div>
+        </div>
+        
+        <!-- Hero Content -->
+        <div class="hero-content">
+          <h1 class="hero-title">Technology Made Personal</h1>
+          <p class="hero-subtitle">Empowering businesses with cutting-edge solutions in digital transformation, drone technology, and advanced imaging</p>
+          
+          <div class="hero-cta">
+            <a href="#services" class="btn-hero-primary">
+              Explore Services
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M12 4L10.59 5.41L16.17 11H4V13H16.17L10.59 18.59L12 20L20 12L12 4Z" fill="currentColor"/>
+              </svg>
+            </a>
+            <a href="#contact" class="btn-hero-secondary">
+              Get in Touch
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M20 4H4C2.9 4 2 4.9 2 6V18C2 19.1 2.9 20 4 20H20C21.1 20 22 19.1 22 18V6C22 4.9 21.1 4 20 4ZM20 8L12 13L4 8V6L12 11L20 6V8Z" fill="currentColor"/>
+              </svg>
+            </a>
           </div>
         </div>
       </section>
@@ -176,7 +199,6 @@
         </section>
         
         <!-- Our Partners Section -->
-        <hr class="divider-w">
         <section class="module" id="partners">
           <div class="container">
             <div class="row">
@@ -186,19 +208,16 @@
               </div>
             </div>
             <div class="row multi-columns-row">
-              <div class="col-md-8 col-md-offset-2 col-sm-10 col-sm-offset-1">
-                <div class="partner-item text-center">
+              <div class="col-md-12 col-sm-12">
+                <div class="partner-item text-center" style="padding: 30px 40px;">
                   <div class="partner-logo">
                     <a href="https://trinverse.github.io/artsync/index.html" target="_blank" rel="noopener noreferrer">
-                      <div class="partner-logo-placeholder">
-                        <span class="icon-globe" style="font-size: 48px; color: #6366f1;"></span>
-                        <h3 class="font-alt" style="margin-top: 15px; color: #6366f1;">ArtSync</h3>
-                      </div>
+                      <img src="artsync.svg" alt="ArtSync Logo" style="width: 100px; height: 100px; margin-bottom: 15px; display: block; margin-left: auto; margin-right: auto;">
                     </a>
                   </div>
                   <div class="partner-description">
                     <h4 class="font-alt">ArtSync - Digital Excellence Partner</h4>
-                    <p>Your partner in digital excellence, providing top-tier software development, data entry, and IT support services. ArtSync specializes in custom applications, enterprise solutions, and reliable IT support to help businesses thrive in the digital age.</p>
+                    <p style="max-width: 800px; margin: 0 auto 20px;">Your partner in digital excellence, providing top-tier software development, data entry, and IT support services. ArtSync specializes in custom applications, enterprise solutions, and reliable IT support to help businesses thrive in the digital age.</p>
                     <a href="https://trinverse.github.io/artsync/index.html" target="_blank" rel="noopener noreferrer" class="btn btn-border btn-round">VISIT ARTSYNC</a>
                   </div>
                 </div>
@@ -206,7 +225,7 @@
             </div>
             
             <!-- Partnership Benefits -->
-            <div class="row" style="margin-top: 50px;">
+            <div class="row multi-columns-row" style="margin-top: 50px;">
               <div class="col-md-4 col-sm-12">
                 <div class="features-item text-center">
                   <div class="features-icon"><span class="icon-tools-2"></span></div>
@@ -232,11 +251,10 @@
           </div>
         </section>
         
-        <hr class="divider-w">
         <div class="module-small" style="padding-bottom: 0px" id="about">
           <div class="container">
             <div class="row">
-              <div class="col-sm-3">
+              <div class="col-sm-6">
                 <div class="widget">
                   <h5 class="widget-title font-alt">About Trinly</h5>
                   <p>We are a highly specialized technology consultancy company.</p>
@@ -244,7 +262,7 @@
                   <p>Although a startup, our team has a vast technical background throughout multiple projects with sensible deadlines and advanced requirements.</p>
                 </div>
               </div>
-              <div class="col-sm-3" id="contact">
+              <div class="col-sm-6" id="contact">
                 <div class="widget">
                   <h5 class="widget-title font-alt">Contact</h5>
                   <ul class="icon-list">
