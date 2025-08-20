@@ -486,9 +486,10 @@ console.log('%c Proudly Crafted with ZiOn.', 'background: #222; color: #bada55')
 
 
         /* ---------------------------------------------- /*
-         * Subscribe form ajax
+         * Subscribe form ajax - DISABLED (no backend)
          /* ---------------------------------------------- */
 
+        /* Subscription form disabled - no backend configured
         $('#subscription-form').submit(function(e) {
 
             e.preventDefault();
@@ -520,6 +521,7 @@ console.log('%c Proudly Crafted with ZiOn.', 'background: #222; color: #bada55')
             });
 
         });
+        */
 
 
         /* ---------------------------------------------- /*

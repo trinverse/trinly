@@ -63,16 +63,22 @@
       <nav class="navbar navbar-custom navbar-fixed-top" role="navigation">
         <div class="container">
           <div class="navbar-header">
-            <button class="navbar-toggle" type="button" data-toggle="collapse" data-target="#custom-collapse"><span class="sr-only">Toggle navigation</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button><a class="navbar-brand" href="index.html"><img src="assets/images/logo.svg" alt="Trinly Logo" style="height: 40px;"/></a>
+            <a class="navbar-brand" href="index.html"><img src="assets/images/logo.svg" alt="Trinly Logo" style="height: 40px;"/></a>
+            <button class="navbar-toggle" type="button" data-toggle="collapse" data-target="#custom-collapse">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
           </div>
           <div class="collapse navbar-collapse" id="custom-collapse">
             <ul class="nav navbar-nav navbar-right">
-              <li class="dropdown"><a href="index.html#about">About</a></li>
-              <li class="dropdown"><a href="index.html#services">Services</a></li>
-              <li class="dropdown"><a href="specialties.html">Specialties</a></li>
-              <li class="dropdown"><a href="portfolio.html">Portfolio</a></li>
-              <li class="dropdown"><a href="team.html">Our Team</a></li>
-              <li class="dropdown"><a href="#contact">Contact</a></li>
+              <li><a href="index.html#about"><i class="fa fa-info-circle"></i> <span>About</span></a></li>
+              <li><a href="index.html#services"><i class="fa fa-cogs"></i> <span>Services</span></a></li>
+              <li><a href="specialties.html"><i class="fa fa-star"></i> <span>Specialties</span></a></li>
+              <li><a href="portfolio.html"><i class="fa fa-briefcase"></i> <span>Portfolio</span></a></li>
+              <li><a href="team.html"><i class="fa fa-users"></i> <span>Our Team</span></a></li>
+              <li><a href="#contact"><i class="fa fa-envelope"></i> <span>Contact</span></a></li>
             </ul>
           </div>
         </div>
@@ -207,18 +213,46 @@
                 <div class="module-subtitle font-serif">Collaborating with industry leaders to deliver exceptional solutions</div>
               </div>
             </div>
-            <div class="row multi-columns-row">
-              <div class="col-md-12 col-sm-12">
-                <div class="partner-item text-center" style="padding: 30px 40px;">
+            <div class="row">
+              <div class="col-md-6 col-sm-12">
+                <div class="material-card partner-card">
                   <div class="partner-logo">
                     <a href="https://trinverse.github.io/artsync/index.html" target="_blank" rel="noopener noreferrer">
-                      <img src="artsync.svg" alt="ArtSync Logo" style="width: 100px; height: 100px; margin-bottom: 15px; display: block; margin-left: auto; margin-right: auto;">
+                      <div class="partner-icon-wrapper">
+                        <img src="assets/images/artsync.svg" alt="ArtSync Logo" class="partner-icon">
+                      </div>
                     </a>
                   </div>
-                  <div class="partner-description">
-                    <h4 class="font-alt">ArtSync - Digital Excellence Partner</h4>
-                    <p style="max-width: 800px; margin: 0 auto 20px;">Your partner in digital excellence, providing top-tier software development, data entry, and IT support services. ArtSync specializes in custom applications, enterprise solutions, and reliable IT support to help businesses thrive in the digital age.</p>
-                    <a href="https://trinverse.github.io/artsync/index.html" target="_blank" rel="noopener noreferrer" class="btn btn-border btn-round">VISIT ARTSYNC</a>
+                  <div class="partner-content">
+                    <h3 class="partner-title font-alt">ARTSYNC - DIGITAL EXCELLENCE</h3>
+                    <p class="partner-description">Your partner in digital excellence, providing top-tier software development, data entry, and IT support services. ArtSync specializes in custom applications, enterprise solutions, and reliable IT support to help businesses thrive in the digital age.</p>
+                    <a href="https://trinverse.github.io/artsync/index.html" target="_blank" rel="noopener noreferrer" class="btn-material-primary">
+                      VISIT ARTSYNC
+                      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" style="margin-left: 8px;">
+                        <path d="M12 4L10.59 5.41L16.17 11H4V13H16.17L10.59 18.59L12 20L20 12L12 4Z" fill="currentColor"/>
+                      </svg>
+                    </a>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-6 col-sm-12">
+                <div class="material-card partner-card">
+                  <div class="partner-logo">
+                    <a href="https://corshift.com/" target="_blank" rel="noopener noreferrer">
+                      <div class="partner-icon-wrapper">
+                        <span class="icon-layers" style="font-size: 36px; color: var(--md-sys-color-primary);"></span>
+                      </div>
+                    </a>
+                  </div>
+                  <div class="partner-content">
+                    <h3 class="partner-title font-alt">CORSHIFT - UX EXCELLENCE</h3>
+                    <p class="partner-description">Specializing in user experience design and research, Corshift delivers intuitive, user-centered solutions that transform digital products. From wireframing to prototyping, they create experiences that delight users and drive business success.</p>
+                    <a href="https://corshift.com/" target="_blank" rel="noopener noreferrer" class="btn-material-primary">
+                      VISIT CORSHIFT
+                      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" style="margin-left: 8px;">
+                        <path d="M12 4L10.59 5.41L16.17 11H4V13H16.17L10.59 18.59L12 20L20 12L12 4Z" fill="currentColor"/>
+                      </svg>
+                    </a>
                   </div>
                 </div>
               </div>
@@ -264,13 +298,28 @@
               </div>
               <div class="col-sm-6" id="contact">
                 <div class="widget">
-                  <h5 class="widget-title font-alt">Contact</h5>
-                  <ul class="icon-list">
-                    <li>US: +1 919 578 49 44</li>
-                    <li>PORTUGAL: +351 912 626 111</li>
-                    <li>E-mail:ashish@trinly.us</li>
-                    <li>E-mail:deepak@trinly.us</li>
-                  </ul>
+                  <h5 class="widget-title font-alt">Get in Touch</h5>
+                  <form id="contact-form" class="contact-form">
+                    <input type="hidden" name="access_key" value="8de4a990-2d3b-44e8-aa7f-27b65f540cca">
+                    
+                    <div class="form-group">
+                      <input type="text" name="name" class="form-control" placeholder="Your Name" required>
+                    </div>
+                    <div class="form-group">
+                      <input type="email" name="email" class="form-control" placeholder="Your Email" required>
+                    </div>
+                    <div class="form-group">
+                      <textarea name="message" class="form-control" rows="4" placeholder="Your Message" required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary btn-round">Send Message</button>
+                    
+                    <div id="form-notification" class="form-notification" style="display: none; margin-top: 15px;"></div>
+                  </form>
+                  
+                  <div class="contact-info" style="margin-top: 20px;">
+                    <p><i class="fa fa-phone"></i> US: +1 919 578 49 44 | PT: +351 912 626 111</p>
+                    <p><i class="fa fa-envelope"></i> ashish@trinly.us | deepak@trinly.us</p>
+                  </div>
                 </div>
               </div>
             </div>
@@ -305,5 +354,59 @@
     <script src="assets/lib/simple-text-rotator/jquery.simple-text-rotator.min.js"></script>
     <script src="assets/js/plugins.js"></script>
     <script src="assets/js/main.js"></script>
+    
+    <!-- Contact Form AJAX Submission -->
+    <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      const form = document.getElementById('contact-form');
+      const notification = document.getElementById('form-notification');
+      
+      if (form) {
+        form.addEventListener('submit', async function(e) {
+          e.preventDefault();
+          
+          const submitBtn = form.querySelector('button[type="submit"]');
+          const originalBtnText = submitBtn.innerHTML;
+          submitBtn.innerHTML = '<i class="fa fa-spinner fa-spin"></i> Sending...';
+          submitBtn.disabled = true;
+          
+          const formData = new FormData(form);
+          
+          try {
+            const response = await fetch('https://api.web3forms.com/submit', {
+              method: 'POST',
+              body: formData
+            });
+            
+            const data = await response.json();
+            
+            if (data.success) {
+              notification.style.display = 'block';
+              notification.className = 'form-notification alert alert-success';
+              notification.innerHTML = '<i class="fa fa-check-circle"></i> Thank you! Your message has been sent successfully.';
+              form.reset();
+              
+              setTimeout(() => {
+                notification.style.display = 'none';
+              }, 5000);
+            } else {
+              throw new Error('Form submission failed');
+            }
+          } catch (error) {
+            notification.style.display = 'block';
+            notification.className = 'form-notification alert alert-danger';
+            notification.innerHTML = '<i class="fa fa-exclamation-circle"></i> Sorry, there was an error sending your message. Please try again.';
+            
+            setTimeout(() => {
+              notification.style.display = 'none';
+            }, 5000);
+          } finally {
+            submitBtn.innerHTML = originalBtnText;
+            submitBtn.disabled = false;
+          }
+        });
+      }
+    });
+    </script>
   </body>
 </html>
