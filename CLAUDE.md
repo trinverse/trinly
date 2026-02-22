@@ -43,8 +43,9 @@ git log --oneline -10
 ### File Structure
 - `index.html` - Main landing page with services, about, contact sections
 - `specialties.html` - Drone specialties page
-- `portfolio.html` - Portfolio page (new)
-- `team.html` - Team page (new)
+- `portfolio.html` - Portfolio page
+- `team.html` - Team page
+- `sms-consent.html` - SMS opt-in consent proof page for Twilio compliance (TCPA/CTIA)
 - `assets/css/style.css` - Core styles and responsive design
 - `assets/css/material.css` - Material Design 3 theme
 - `assets/js/main.js` - Page initialization, animations, navigation
@@ -89,7 +90,7 @@ git log --oneline -10
 Add `data-background="path/to/image.jpg"` to section elements. JavaScript in `main.js` handles application.
 
 ### Navigation Links
-Update all pages when adding new pages. Maintain consistent structure across `index.html`, `specialties.html`, `portfolio.html`, and `team.html`.
+Update all pages when adding new pages. Maintain consistent structure across `index.html`, `specialties.html`, `portfolio.html`, `team.html`, and `sms-consent.html`.
 
 ## Testing & Validation
 
