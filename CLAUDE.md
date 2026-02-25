@@ -4,7 +4,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## Project Overview
 
-Trinly is a static website for a technology consultancy specializing in digital image processing, drone operations, photogrammetry, and digital transformation services. Built with HTML, Tailwind CSS (CDN), and vanilla JavaScript. Supports light and dark themes with a toggle.
+Trinly is a static website for a technology consultancy specializing in clinical trial applications, financial systems, digital image processing, drone operations, photogrammetry, and digital transformation services. Built with HTML, Tailwind CSS (CDN), and vanilla JavaScript. Supports light and dark themes with a toggle.
 
 ## Development Commands
 
@@ -36,8 +36,7 @@ git log --oneline -10
 
 ### File Structure
 - `index.html` - Main landing page with hero, services, partners, about, contact sections
-- `specialties.html` - Drone specialties page
-- `portfolio.html` - Portfolio page with filterable project cards
+- `services.html` - Combined services page with specialties and portfolio sections
 - `team.html` - Team page with member cards and culture section
 - `sms-consent.html` - SMS opt-in consent proof page for Twilio compliance (TCPA/CTIA)
 - `assets/js/theme.js` - Dark mode toggle (class-based, respects OS preference, persists to localStorage)
@@ -89,7 +88,7 @@ git log --oneline -10
 ```
 
 ### Navigation Links
-Update all 5 pages when adding new pages. The navbar is duplicated across pages (no templating).
+Update all 4 pages when adding new pages. The navbar is duplicated across pages (no templating).
 
 ### Contact Form
 Uses Web3Forms API (access key in `index.html`). AJAX submission via inline `<script>` on index.html.
@@ -98,7 +97,7 @@ Uses Web3Forms API (access key in `index.html`). AJAX submission via inline `<sc
 
 Since this is a static site with no build process:
 1. Serve locally with `python3 -m http.server 8000`
-2. Test all 5 pages in both light and dark themes
+2. Test all 4 pages in both light and dark themes
 3. Test responsive: mobile (375px), tablet (768px), desktop (1200px+)
 4. Verify mobile hamburger menu opens/closes
 5. Verify contact form submission works (Web3Forms)
