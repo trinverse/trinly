@@ -43,9 +43,9 @@ document.addEventListener('DOMContentLoaded', function () {
       btn.addEventListener('click', function (e) {
         e.preventDefault();
         // Update active state
-        filters.forEach(function (b) { b.classList.remove('bg-[#0D0D0D]', 'dark:bg-[#ECECEC]', 'text-white', 'dark:text-[#0D0D0D]'); b.classList.add('bg-gray-100', 'dark:bg-[#2F2F2F]', 'text-[#0D0D0D]', 'dark:text-[#ECECEC]'); });
-        btn.classList.add('bg-[#0D0D0D]', 'dark:bg-[#ECECEC]', 'text-white', 'dark:text-[#0D0D0D]');
-        btn.classList.remove('bg-gray-100', 'dark:bg-[#2F2F2F]', 'text-[#0D0D0D]', 'dark:text-[#ECECEC]');
+        filters.forEach(function (b) { b.classList.remove('bg-gradient-to-r', 'from-[#7C3AED]', 'to-[#4F46E5]', 'text-white'); b.classList.add('bg-[#F0F0F8]', 'dark:bg-[#16161E]', 'text-[#0A0A1A]', 'dark:text-[#F0F0F5]'); });
+        btn.classList.add('bg-gradient-to-r', 'from-[#7C3AED]', 'to-[#4F46E5]', 'text-white');
+        btn.classList.remove('bg-[#F0F0F8]', 'dark:bg-[#16161E]', 'text-[#0A0A1A]', 'dark:text-[#F0F0F5]');
 
         var filter = btn.getAttribute('data-filter');
         items.forEach(function (item) {
@@ -57,6 +57,21 @@ document.addEventListener('DOMContentLoaded', function () {
         });
       });
     });
+  }
+
+  // --- Scroll reveal for cards ---
+  var reveals = document.querySelectorAll('[data-reveal]');
+  if (reveals.length && 'IntersectionObserver' in window) {
+    var observer = new IntersectionObserver(function (entries) {
+      entries.forEach(function (entry) {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('opacity-100', 'translate-y-0');
+          entry.target.classList.remove('opacity-0', 'translate-y-4');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.1 });
+    reveals.forEach(function (el) { observer.observe(el); });
   }
 
   // --- Smooth scroll for anchor links ---

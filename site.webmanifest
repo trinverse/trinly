@@ -1,7 +1,7 @@
 {
  "name": "Trinly",
  "short_name": "Trinly",
- "description": "Technology Made Personal",
+ "description": "AI-First Technology Solutions",
  "icons": [
   {
    "src": "favicon.svg",
@@ -49,5 +49,5 @@
  "start_url": "index.html",
  "display": "standalone",
  "theme_color": "#6750A4",
- "background_color": "#ffffff"
+ "background_color": "#0A0A0F"
 }

@@ -13,7 +13,7 @@
     localStorage.setItem(STORAGE_KEY, theme);
     // Update meta theme-color
     const meta = document.querySelector('meta[name="theme-color"]');
-    if (meta) meta.setAttribute('content', theme === 'dark' ? '#212121' : '#ffffff');
+    if (meta) meta.setAttribute('content', theme === 'dark' ? '#0B0B11' : '#FFFFFF');
   }
 
   // Apply immediately (called from inline script in <head> for anti-FOUC)

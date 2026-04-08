@@ -1,0 +1,116 @@
+/* Trinly Futuristic Theme */
+
+/* ==========================================
+   GRADIENT TEXT
+   Dark mode: violet-to-cyan gradient
+   Light mode: deep navy solid (readable)
+   ========================================== */
+.text-gradient {
+  color: #1A1A2E;
+}
+.dark .text-gradient {
+  background: linear-gradient(135deg, #A78BFA 0%, #7C3AED 40%, #06B6D4 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: transparent;
+}
+
+/* ==========================================
+   DOT GRID — subtle in light, visible in dark
+   ========================================== */
+.bg-grid {
+  background-image: radial-gradient(circle, rgba(124, 58, 237, 0.04) 1px, transparent 1px);
+  background-size: 32px 32px;
+}
+.dark .bg-grid {
+  background-image: radial-gradient(circle, rgba(124, 58, 237, 0.15) 1px, transparent 1px);
+}
+
+/* ==========================================
+   ANIMATED GLOW BLOBS
+   Subtle in light, prominent in dark
+   ========================================== */
+@keyframes float-glow {
+  0%, 100% { transform: translate(-50%, -50%) scale(1); opacity: 0.5; }
+  33% { transform: translate(-48%, -52%) scale(1.05); opacity: 0.7; }
+  66% { transform: translate(-52%, -48%) scale(0.95); opacity: 0.4; }
+}
+.glow-blob { animation: float-glow 8s ease-in-out infinite; }
+
+@keyframes float-glow-2 {
+  0%, 100% { transform: translate(0, 0) scale(1); opacity: 0.3; }
+  33% { transform: translate(10px, -15px) scale(1.1); opacity: 0.5; }
+  66% { transform: translate(-10px, 10px) scale(0.9); opacity: 0.2; }
+}
+.glow-blob-2 { animation: float-glow-2 10s ease-in-out infinite; }
+
+/* ==========================================
+   CARD HOVER
+   Light: lift + soft shadow
+   Dark: lift + colored glow
+   ========================================== */
+.card-futuristic {
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+.card-futuristic:hover {
+  transform: translateY(-2px);
+  border-color: rgba(124, 58, 237, 0.3);
+  box-shadow: 0 8px 30px rgba(124, 58, 237, 0.08);
+}
+.dark .card-futuristic:hover {
+  border-color: rgba(124, 58, 237, 0.5);
+  box-shadow:
+    0 0 30px rgba(124, 58, 237, 0.15),
+    0 0 60px rgba(6, 182, 212, 0.06);
+}
+
+/* ==========================================
+   BADGE NEON PULSE — dark mode only
+   ========================================== */
+@keyframes neon-pulse {
+  0%, 100% { box-shadow: 0 0 8px rgba(6, 182, 212, 0.2); }
+  50% { box-shadow: 0 0 16px rgba(6, 182, 212, 0.4); }
+}
+.dark .badge-neon { animation: neon-pulse 3s ease-in-out infinite; }
+
+/* ==========================================
+   SCAN LINES — dark mode only
+   ========================================== */
+.scanlines { position: relative; }
+.dark .scanlines::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: repeating-linear-gradient(
+    0deg, transparent, transparent 2px,
+    rgba(124, 58, 237, 0.012) 2px,
+    rgba(124, 58, 237, 0.012) 4px
+  );
+  pointer-events: none;
+  z-index: 1;
+}
+
+/* ==========================================
+   GLOWING CTA — glow behind in dark mode
+   ========================================== */
+.btn-glow { position: relative; overflow: hidden; }
+.dark .btn-glow::before {
+  content: '';
+  position: absolute;
+  inset: -2px;
+  background: linear-gradient(135deg, #7C3AED, #06B6D4, #7C3AED);
+  border-radius: inherit;
+  z-index: -1;
+  filter: blur(8px);
+  opacity: 0.4;
+  transition: opacity 0.3s ease;
+}
+.dark .btn-glow:hover::before { opacity: 0.7; }
+
+/* ==========================================
+   STATS GLOW — dark mode only
+   ========================================== */
+.dark .stat-glow {
+  text-shadow: 0 0 20px rgba(124, 58, 237, 0.3), 0 0 40px rgba(6, 182, 212, 0.15);
+}
