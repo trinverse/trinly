@@ -11,9 +11,8 @@
   function apply(theme) {
     document.documentElement.classList.toggle('dark', theme === 'dark');
     localStorage.setItem(STORAGE_KEY, theme);
-    // Update meta theme-color
     const meta = document.querySelector('meta[name="theme-color"]');
-    if (meta) meta.setAttribute('content', theme === 'dark' ? '#0B0B11' : '#FFFFFF');
+    if (meta) meta.setAttribute('content', theme === 'dark' ? '#1A1915' : '#FAF9F5');
   }
 
   // Apply immediately (called from inline script in <head> for anti-FOUC)

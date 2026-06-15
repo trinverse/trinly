@@ -20,12 +20,12 @@
     <link rel="icon" type="image/png" sizes="16x16" href="assets/images/favicons/favicon-16x16.png">
     <link rel="icon" type="image/svg+xml" href="favicon.svg">
     <link rel="manifest" href="site.webmanifest">
-    <meta name="msapplication-TileColor" content="#0B0B11">
+    <meta name="msapplication-TileColor" content="#1A1915">
     <meta name="msapplication-TileImage" content="assets/images/favicons/ms-icon-144x144.png">
-    <meta name="theme-color" content="#FFFFFF">
+    <meta name="theme-color" content="#FAF9F5">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,500;0,8..60,600;1,8..60,400&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
       tailwind.config = {
@@ -34,7 +34,7 @@
           extend: {
             fontFamily: {
               sans: ['Inter', 'system-ui', 'sans-serif'],
-              heading: ['Sora', 'system-ui', 'sans-serif'],
+              heading: ['Source Serif 4', 'system-ui', 'sans-serif'],
               mono: ['JetBrains Mono', 'monospace'],
             },
           }
@@ -43,52 +43,52 @@
     </script>
     <script src="assets/js/theme.js"></script>
     <script>window.__applyTheme();</script>
-    <link rel="stylesheet" href="assets/css/futuristic.css">
-    <style>html { background: #FFFFFF; } html.dark { background: #0B0B11; }</style>
+    <link rel="stylesheet" href="assets/css/futuristic.css?v=9">
+    <style>html { background: #FAF9F5; } html.dark { background: #1A1915; }</style>
   </head>
-  <body class="bg-white dark:bg-[#0B0B11] text-[#1A1A2E] dark:text-[#F0F0F5] font-sans">
+  <body class="tl-theme font-sans">
 
     <!-- Page Loader -->
-    <div id="page-loader" class="fixed inset-0 z-[100] flex items-center justify-center bg-white dark:bg-[#0B0B11] transition-opacity duration-300">
-      <div class="text-[#6B6B8A] dark:text-[#7878A0] text-sm font-mono">Loading...</div>
+    <div id="page-loader" class="fixed inset-0 z-[100] flex items-center justify-center transition-opacity duration-150">
+      <div class="text-sm" style="color: var(--tl-muted)">Loading</div>
     </div>
 
     <!-- Navbar -->
-    <nav class="sticky top-0 z-50 bg-white/80 dark:bg-[#0B0B11]/80 backdrop-blur-xl border-b border-[#EBEBF0] dark:border-[#22222E]">
+    <nav class="tl-nav sticky top-0 z-50">
       <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="flex items-center justify-between h-16">
-          <a href="index.html" class="flex-shrink-0">
-            <img src="assets/images/logo.svg" alt="Trinly" class="h-8">
+          <a href="index.html" class="flex-shrink-0 tl-logo-link" aria-label="Trinly home">
+            <img src="assets/images/logo-icon.svg?v=1" alt="" class="tl-logo-icon" aria-hidden="true"><span class="tl-logo-text">Trinly</span>
           </a>
           <div class="hidden md:flex items-center gap-1">
-            <a href="index.html#about" class="px-3 py-2 text-sm text-[#1A1A2E] dark:text-[#F0F0F5] hover:bg-[#F8F8FC] dark:hover:bg-[#1A1A26] rounded-lg transition-colors">About</a>
-            <a href="services.html" class="px-3 py-2 text-sm text-[#1A1A2E] dark:text-[#F0F0F5] hover:bg-[#F8F8FC] dark:hover:bg-[#1A1A26] rounded-lg transition-colors">Services</a>
-            <a href="showcase.html" class="px-3 py-2 text-sm text-[#1A1A2E] dark:text-[#F0F0F5] hover:bg-[#F8F8FC] dark:hover:bg-[#1A1A26] rounded-lg transition-colors">Showcase</a>
-            <a href="team.html" class="px-3 py-2 text-sm text-[#1A1A2E] dark:text-[#F0F0F5] hover:bg-[#F8F8FC] dark:hover:bg-[#1A1A26] rounded-lg transition-colors">Our Team</a>
-            <a href="#contact" class="ml-2 px-4 py-2 text-sm font-medium text-white bg-gradient-to-r from-[#7C3AED] to-[#4F46E5] hover:from-[#6D28D9] hover:to-[#4338CA] rounded-lg transition-all shadow-lg shadow-[#7C3AED]/25">Contact</a>
-            <button onclick="window.__toggleTheme()" class="ml-2 p-2 rounded-lg hover:bg-[#F8F8FC] dark:hover:bg-[#1A1A26] transition-colors" aria-label="Toggle theme">
+            <a href="index.html#about" class="tl-nav-link px-3 py-2 text-sm rounded-full">About</a>
+            <a href="services.html" class="tl-nav-link px-3 py-2 text-sm rounded-full">Services</a>
+            <a href="showcase.html" class="tl-nav-link px-3 py-2 text-sm rounded-full">Showcase</a>
+            <a href="team.html" class="tl-nav-link px-3 py-2 text-sm rounded-full">Our Team</a>
+            <a href="#contact" class="tl-btn-accent ml-3">Contact</a>
+            <button onclick="window.__toggleTheme()" class="tl-theme-toggle ml-2 p-2 transition-colors" aria-label="Toggle theme">
               <svg class="w-5 h-5 hidden dark:block text-[#F0F0F5]" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"/></svg>
               <svg class="w-5 h-5 block dark:hidden text-[#1A1A2E]" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"/></svg>
             </button>
           </div>
           <div class="flex items-center gap-2 md:hidden">
-            <button onclick="window.__toggleTheme()" class="p-2 rounded-lg hover:bg-[#F8F8FC] dark:hover:bg-[#1A1A26] transition-colors" aria-label="Toggle theme">
+            <button onclick="window.__toggleTheme()" class="tl-theme-toggle p-2 transition-colors" aria-label="Toggle theme">
               <svg class="w-5 h-5 hidden dark:block text-[#F0F0F5]" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"/></svg>
               <svg class="w-5 h-5 block dark:hidden text-[#1A1A2E]" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"/></svg>
             </button>
-            <button id="mobile-menu-btn" aria-expanded="false" class="p-2 rounded-lg hover:bg-[#F8F8FC] dark:hover:bg-[#1A1A26] transition-colors">
-              <svg class="w-6 h-6 text-[#1A1A2E] dark:text-[#F0F0F5]" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16"/></svg>
+            <button id="mobile-menu-btn" aria-expanded="false" class="p-2 rounded-lg  transition-colors">
+              <svg class="w-6 h-6 " fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16"/></svg>
             </button>
           </div>
         </div>
       </div>
-      <div id="mobile-menu" class="hidden md:hidden border-t border-[#EBEBF0] dark:border-[#22222E] bg-white dark:bg-[#0B0B11]">
+      <div id="mobile-menu" class="hidden md:hidden border-t  ">
         <div class="px-4 py-3 space-y-1">
-          <a href="index.html#about" class="block px-3 py-2 text-sm text-[#1A1A2E] dark:text-[#F0F0F5] hover:bg-[#F8F8FC] dark:hover:bg-[#1A1A26] rounded-lg">About</a>
-          <a href="services.html" class="block px-3 py-2 text-sm text-[#1A1A2E] dark:text-[#F0F0F5] hover:bg-[#F8F8FC] dark:hover:bg-[#1A1A26] rounded-lg">Services</a>
-          <a href="showcase.html" class="block px-3 py-2 text-sm text-[#1A1A2E] dark:text-[#F0F0F5] hover:bg-[#F8F8FC] dark:hover:bg-[#1A1A26] rounded-lg">Showcase</a>
-          <a href="team.html" class="block px-3 py-2 text-sm text-[#1A1A2E] dark:text-[#F0F0F5] hover:bg-[#F8F8FC] dark:hover:bg-[#1A1A26] rounded-lg">Our Team</a>
-          <a href="#contact" class="block px-3 py-2 text-sm font-medium text-white bg-gradient-to-r from-[#7C3AED] to-[#4F46E5] rounded-lg text-center">Contact</a>
+          <a href="index.html#about" class="block px-3 py-2 text-sm tl-nav-link rounded-lg">About</a>
+          <a href="services.html" class="block px-3 py-2 text-sm tl-nav-link rounded-lg">Services</a>
+          <a href="showcase.html" class="block px-3 py-2 text-sm tl-nav-link rounded-lg">Showcase</a>
+          <a href="team.html" class="block px-3 py-2 text-sm tl-nav-link rounded-lg">Our Team</a>
+          <a href="#contact" class="tl-btn-accent block text-center">Contact</a>
         </div>
       </div>
     </nav>
@@ -96,88 +96,80 @@
     <main>
 
       <!-- Hero Section -->
-      <section id="home" class="relative bg-white dark:bg-[#0B0B11] overflow-hidden">
-        <div class="absolute inset-0 overflow-hidden pointer-events-none">
-          <div class="glow-blob absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-[#7C3AED]/10 dark:bg-[#7C3AED]/20 rounded-full blur-[120px]"></div>
-          <div class="glow-blob-2 absolute top-1/3 right-1/4 w-[400px] h-[400px] bg-[#7C3AED]/8 dark:bg-[#7C3AED]/12 rounded-full blur-[100px]"></div>
-        </div>
-        <div class="absolute inset-0 bg-grid pointer-events-none"></div>
-        <div class="relative max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-24 sm:py-32 lg:py-40 text-center">
-          <h1 class="font-heading text-4xl sm:text-5xl lg:text-7xl font-bold tracking-tight text-gradient">We Build Intelligent Systems</h1>
-          <p class="mt-6 max-w-2xl mx-auto text-lg text-[#6B6B8A] dark:text-[#7878A0] leading-relaxed">From data preparation and model training to production-grade RAG systems, AI agents, and MLOps &mdash; we turn AI ambitions into shipped products.</p>
-          <div class="mt-10 flex flex-col sm:flex-row items-center justify-center gap-4">
-            <a href="showcase.html" class="btn-glow inline-flex items-center gap-2 px-6 py-3 text-sm font-medium text-white bg-gradient-to-r from-[#7C3AED] to-[#4F46E5] hover:from-[#6D28D9] hover:to-[#4338CA] rounded-lg transition-all shadow-lg shadow-[#7C3AED]/25">
-              Explore Our Work
-              <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
-            </a>
-            <a href="#contact" class="inline-flex items-center gap-2 px-6 py-3 text-sm font-medium text-[#7C3AED] dark:text-[#22D3EE] border border-[#7C3AED]/30 hover:border-[#7C3AED] hover:bg-[#7C3AED]/5 rounded-lg transition-all duration-300">
-              Get in Touch
-            </a>
+      <section id="home" class="tl-hero">
+        <div class="tl-hero-glow"></div>
+        <div class="tl-hero-inner">
+          <span class="tl-eyebrow">AI-first consultancy</span>
+          <h1>Intelligence, built for production.</h1>
+          <p class="tl-hero-lead">From data preparation and model training to production-grade RAG systems, AI agents, and MLOps — we turn AI ambitions into shipped products.</p>
+          <div class="tl-hero-actions">
+            <a href="showcase.html" class="tl-btn-primary">Explore our work</a>
+            <a href="#contact" class="tl-btn-secondary">Get in touch</a>
           </div>
         </div>
       </section>
 
       <!-- Capabilities Section -->
-      <section id="services" class="bg-[#F8F8FC] dark:bg-[#121220] bg-grid scanlines">
+      <section id="services" class="tl-section-alt">
         <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-20 sm:py-24">
           <div class="text-center mb-16">
-            <span class="inline-flex items-center gap-2 px-4 py-1.5 text-xs font-mono font-medium text-[#7C3AED] dark:text-[#A78BFA] bg-[#7C3AED]/10 rounded-full border border-[#7C3AED]/20 mb-4">CAPABILITIES</span>
-            <h2 class="font-heading text-3xl sm:text-4xl font-bold text-[#1A1A2E] dark:text-[#F0F0F5]">What We Build</h2>
+            <span class="tl-section-label">CAPABILITIES</span>
+            <h2 class="tl-section-title ">What We Build</h2>
           </div>
           <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
 
             <!-- RAG Systems -->
-            <div data-reveal class="opacity-0 translate-y-4 transition-all duration-700 bg-white dark:bg-[#1A1A26] border border-[#EBEBF0] dark:border-[#22222E] rounded-xl p-6 hover:border-[#7C3AED]/40 dark:hover:border-[#7C3AED]/40 card-futuristic">
-              <div class="w-10 h-10 flex items-center justify-center text-[#7C3AED] mb-4">
+            <div class="tl-card" data-reveal>
+              <div class="tl-card-icon">
                 <svg class="w-8 h-8" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M20.25 6.375c0 2.278-3.694 4.125-8.25 4.125S3.75 8.653 3.75 6.375m16.5 0c0-2.278-3.694-4.125-8.25-4.125S3.75 4.097 3.75 6.375m16.5 0v11.25c0 2.278-3.694 4.125-8.25 4.125s-8.25-1.847-8.25-4.125V6.375m16.5 0v3.75m-16.5-3.75v3.75m16.5 0v3.75C20.25 16.153 16.556 18 12 18s-8.25-1.847-8.25-4.125v-3.75m16.5 0c0 2.278-3.694 4.125-8.25 4.125s-8.25-1.847-8.25-4.125"/></svg>
               </div>
-              <h3 class="font-heading text-base font-semibold text-[#1A1A2E] dark:text-[#F0F0F5] mb-2">RAG Systems</h3>
-              <p class="text-sm text-[#6B6B8A] dark:text-[#7878A0] leading-relaxed">Production retrieval-augmented generation pipelines with vector stores, embedding strategies, and context-aware retrieval.</p>
+              <h3 class="mb-2">RAG Systems</h3>
+              <p class="text-sm leading-relaxed">Production retrieval-augmented generation pipelines with vector stores, embedding strategies, and context-aware retrieval.</p>
             </div>
 
             <!-- Model Training & Fine-tuning -->
-            <div data-reveal class="opacity-0 translate-y-4 transition-all duration-700 bg-white dark:bg-[#1A1A26] border border-[#EBEBF0] dark:border-[#22222E] rounded-xl p-6 hover:border-[#7C3AED]/40 dark:hover:border-[#7C3AED]/40 card-futuristic">
-              <div class="w-10 h-10 flex items-center justify-center text-[#7C3AED] mb-4">
+            <div class="tl-card" data-reveal>
+              <div class="tl-card-icon">
                 <svg class="w-8 h-8" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M9.75 3.104v5.714a2.25 2.25 0 01-.659 1.591L5 14.5M9.75 3.104c-.251.023-.501.05-.75.082m.75-.082a24.301 24.301 0 014.5 0m0 0v5.714c0 .597.237 1.17.659 1.591L19.8 15.3M14.25 3.104c.251.023.501.05.75.082M19.8 15.3l-1.57.393A9.065 9.065 0 0112 15a9.065 9.065 0 00-6.23.693L5 14.5m14.8.8l1.402 1.402c1.232 1.232.65 3.318-1.067 3.611A48.309 48.309 0 0112 21c-2.773 0-5.491-.235-8.135-.687-1.718-.293-2.3-2.379-1.067-3.61L5 14.5"/></svg>
               </div>
-              <h3 class="font-heading text-base font-semibold text-[#1A1A2E] dark:text-[#F0F0F5] mb-2">Model Training &amp; Fine-tuning</h3>
-              <p class="text-sm text-[#6B6B8A] dark:text-[#7878A0] leading-relaxed">Custom model training, LoRA fine-tuning, and domain-specific model adaptation for your unique data.</p>
+              <h3 class="mb-2">Model Training &amp; Fine-tuning</h3>
+              <p class="text-sm leading-relaxed">Custom model training, LoRA fine-tuning, and domain-specific model adaptation for your unique data.</p>
             </div>
 
             <!-- Context Engineering -->
-            <div data-reveal class="opacity-0 translate-y-4 transition-all duration-700 bg-white dark:bg-[#1A1A26] border border-[#EBEBF0] dark:border-[#22222E] rounded-xl p-6 hover:border-[#7C3AED]/40 dark:hover:border-[#7C3AED]/40 card-futuristic">
-              <div class="w-10 h-10 flex items-center justify-center text-[#7C3AED] mb-4">
+            <div class="tl-card" data-reveal>
+              <div class="tl-card-icon">
                 <svg class="w-8 h-8" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M7.5 8.25h9m-9 3H12m-9.75 1.51c0 1.6 1.123 2.994 2.707 3.227 1.129.166 2.27.293 3.423.379.35.026.67.21.865.501L12 21l2.755-4.133a1.14 1.14 0 01.865-.501 48.172 48.172 0 003.423-.379c1.584-.233 2.707-1.626 2.707-3.228V6.741c0-1.602-1.123-2.995-2.707-3.228A48.394 48.394 0 0012 3c-2.392 0-4.744.175-7.043.513C3.373 3.746 2.25 5.14 2.25 6.741v6.018z"/></svg>
               </div>
-              <h3 class="font-heading text-base font-semibold text-[#1A1A2E] dark:text-[#F0F0F5] mb-2">Context Engineering</h3>
-              <p class="text-sm text-[#6B6B8A] dark:text-[#7878A0] leading-relaxed">Structured prompt design, context window optimization, and systematic approaches to getting the best from LLMs.</p>
+              <h3 class="mb-2">Context Engineering</h3>
+              <p class="text-sm leading-relaxed">Structured prompt design, context window optimization, and systematic approaches to getting the best from LLMs.</p>
             </div>
 
             <!-- AI Agents -->
-            <div data-reveal class="opacity-0 translate-y-4 transition-all duration-700 bg-white dark:bg-[#1A1A26] border border-[#EBEBF0] dark:border-[#22222E] rounded-xl p-6 hover:border-[#7C3AED]/40 dark:hover:border-[#7C3AED]/40 card-futuristic">
-              <div class="w-10 h-10 flex items-center justify-center text-[#7C3AED] mb-4">
+            <div class="tl-card" data-reveal>
+              <div class="tl-card-icon">
                 <svg class="w-8 h-8" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M8.25 3v1.5M4.5 8.25H3m18 0h-1.5M4.5 12H3m18 0h-1.5m-15 3.75H3m18 0h-1.5M8.25 19.5V21M12 3v1.5m0 15V21m3.75-18v1.5m0 15V21m-9-1.5h10.5a2.25 2.25 0 002.25-2.25V6.75a2.25 2.25 0 00-2.25-2.25H6.75A2.25 2.25 0 004.5 6.75v10.5a2.25 2.25 0 002.25 2.25zm.75-12h9v9h-9v-9z"/></svg>
               </div>
-              <h3 class="font-heading text-base font-semibold text-[#1A1A2E] dark:text-[#F0F0F5] mb-2">AI Agents</h3>
-              <p class="text-sm text-[#6B6B8A] dark:text-[#7878A0] leading-relaxed">Autonomous AI agents with tool use, multi-step reasoning, and production-grade orchestration frameworks.</p>
+              <h3 class="mb-2">AI Agents</h3>
+              <p class="text-sm leading-relaxed">Autonomous AI agents with tool use, multi-step reasoning, and production-grade orchestration frameworks.</p>
             </div>
 
             <!-- Data Pipelines & Prep -->
-            <div data-reveal class="opacity-0 translate-y-4 transition-all duration-700 bg-white dark:bg-[#1A1A26] border border-[#EBEBF0] dark:border-[#22222E] rounded-xl p-6 hover:border-[#7C3AED]/40 dark:hover:border-[#7C3AED]/40 card-futuristic">
-              <div class="w-10 h-10 flex items-center justify-center text-[#7C3AED] mb-4">
+            <div class="tl-card" data-reveal>
+              <div class="tl-card-icon">
                 <svg class="w-8 h-8" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6A2.25 2.25 0 016 3.75h2.25A2.25 2.25 0 0110.5 6v2.25a2.25 2.25 0 01-2.25 2.25H6a2.25 2.25 0 01-2.25-2.25V6zM3.75 15.75A2.25 2.25 0 016 13.5h2.25a2.25 2.25 0 012.25 2.25V18a2.25 2.25 0 01-2.25 2.25H6A2.25 2.25 0 013.75 18v-2.25zM13.5 6a2.25 2.25 0 012.25-2.25H18A2.25 2.25 0 0120.25 6v2.25A2.25 2.25 0 0118 10.5h-2.25a2.25 2.25 0 01-2.25-2.25V6zM13.5 15.75a2.25 2.25 0 012.25-2.25H18a2.25 2.25 0 012.25 2.25V18A2.25 2.25 0 0118 20.25h-2.25A2.25 2.25 0 0113.5 18v-2.25z"/></svg>
               </div>
-              <h3 class="font-heading text-base font-semibold text-[#1A1A2E] dark:text-[#F0F0F5] mb-2">Data Pipelines &amp; Prep</h3>
-              <p class="text-sm text-[#6B6B8A] dark:text-[#7878A0] leading-relaxed">End-to-end data preparation, cleaning, labeling, and ETL pipelines purpose-built for ML workloads.</p>
+              <h3 class="mb-2">Data Pipelines &amp; Prep</h3>
+              <p class="text-sm leading-relaxed">End-to-end data preparation, cleaning, labeling, and ETL pipelines purpose-built for ML workloads.</p>
             </div>
 
             <!-- MLOps & Deployment -->
-            <div data-reveal class="opacity-0 translate-y-4 transition-all duration-700 bg-white dark:bg-[#1A1A26] border border-[#EBEBF0] dark:border-[#22222E] rounded-xl p-6 hover:border-[#7C3AED]/40 dark:hover:border-[#7C3AED]/40 card-futuristic">
-              <div class="w-10 h-10 flex items-center justify-center text-[#7C3AED] mb-4">
+            <div class="tl-card" data-reveal>
+              <div class="tl-card-icon">
                 <svg class="w-8 h-8" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M2.25 15a4.5 4.5 0 004.5 4.5H18a3.75 3.75 0 001.332-7.257 3 3 0 00-3.758-3.848 5.25 5.25 0 00-10.233 2.33A4.502 4.502 0 002.25 15z"/></svg>
               </div>
-              <h3 class="font-heading text-base font-semibold text-[#1A1A2E] dark:text-[#F0F0F5] mb-2">MLOps &amp; Deployment</h3>
-              <p class="text-sm text-[#6B6B8A] dark:text-[#7878A0] leading-relaxed">Model serving, monitoring, A/B testing, and continuous deployment infrastructure for AI systems.</p>
+              <h3 class="mb-2">MLOps &amp; Deployment</h3>
+              <p class="text-sm leading-relaxed">Model serving, monitoring, A/B testing, and continuous deployment infrastructure for AI systems.</p>
             </div>
 
           </div>
@@ -185,37 +177,37 @@
       </section>
 
       <!-- How We Work -->
-      <section class="relative bg-white dark:bg-[#0B0B11] overflow-hidden">
-        <div class="absolute inset-0 bg-grid pointer-events-none opacity-50"></div>
+      <section class="relative  overflow-hidden">
+        <div class="absolute inset-0 pointer-events-none opacity-50"></div>
         <div class="relative max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-20 sm:py-24">
           <div class="text-center mb-16">
-            <span class="badge-neon inline-flex items-center gap-2 px-4 py-1.5 text-xs font-mono font-medium text-[#7C3AED] dark:text-[#22D3EE] bg-[#7C3AED]/10 rounded-full border border-[#7C3AED]/30 mb-4">PROCESS</span>
-            <h2 class="font-heading text-3xl sm:text-4xl font-bold text-[#1A1A2E] dark:text-[#F0F0F5]">How We Work</h2>
+            <span class="tl-section-label">PROCESS</span>
+            <h2 class="tl-section-title ">How We Work</h2>
           </div>
           <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
 
-            <div data-reveal class="opacity-0 translate-y-4 transition-all duration-700 relative bg-white dark:bg-[#1A1A26] border border-[#EBEBF0] dark:border-[#22222E] rounded-xl p-6">
-              <span class="inline-flex items-center justify-center w-8 h-8 text-xs font-mono font-bold text-white bg-gradient-to-r from-[#7C3AED] to-[#4F46E5] rounded-lg mb-4">01</span>
-              <h3 class="font-heading text-base font-semibold text-[#1A1A2E] dark:text-[#F0F0F5] mb-2">Data Prep</h3>
-              <p class="text-sm text-[#6B6B8A] dark:text-[#7878A0] leading-relaxed">We audit, clean, and structure your data for ML readiness.</p>
+            <div data-reveal class="tl-card">
+              <span class="tl-step-num">01</span>
+              <h3 class="mb-2">Data Prep</h3>
+              <p class="text-sm leading-relaxed">We audit, clean, and structure your data for ML readiness.</p>
             </div>
 
-            <div data-reveal class="opacity-0 translate-y-4 transition-all duration-700 relative bg-white dark:bg-[#1A1A26] border border-[#EBEBF0] dark:border-[#22222E] rounded-xl p-6">
-              <span class="inline-flex items-center justify-center w-8 h-8 text-xs font-mono font-bold text-white bg-gradient-to-r from-[#7C3AED] to-[#4F46E5] rounded-lg mb-4">02</span>
-              <h3 class="font-heading text-base font-semibold text-[#1A1A2E] dark:text-[#F0F0F5] mb-2">Build &amp; Train</h3>
-              <p class="text-sm text-[#6B6B8A] dark:text-[#7878A0] leading-relaxed">Model selection, training, fine-tuning, and rigorous evaluation.</p>
+            <div data-reveal class="tl-card">
+              <span class="tl-step-num">02</span>
+              <h3 class="mb-2">Build &amp; Train</h3>
+              <p class="text-sm leading-relaxed">Model selection, training, fine-tuning, and rigorous evaluation.</p>
             </div>
 
-            <div data-reveal class="opacity-0 translate-y-4 transition-all duration-700 relative bg-white dark:bg-[#1A1A26] border border-[#EBEBF0] dark:border-[#22222E] rounded-xl p-6">
-              <span class="inline-flex items-center justify-center w-8 h-8 text-xs font-mono font-bold text-white bg-gradient-to-r from-[#7C3AED] to-[#4F46E5] rounded-lg mb-4">03</span>
-              <h3 class="font-heading text-base font-semibold text-[#1A1A2E] dark:text-[#F0F0F5] mb-2">Deploy</h3>
-              <p class="text-sm text-[#6B6B8A] dark:text-[#7878A0] leading-relaxed">Production deployment with monitoring, scaling, and reliability.</p>
+            <div data-reveal class="tl-card">
+              <span class="tl-step-num">03</span>
+              <h3 class="mb-2">Deploy</h3>
+              <p class="text-sm leading-relaxed">Production deployment with monitoring, scaling, and reliability.</p>
             </div>
 
-            <div data-reveal class="opacity-0 translate-y-4 transition-all duration-700 relative bg-white dark:bg-[#1A1A26] border border-[#EBEBF0] dark:border-[#22222E] rounded-xl p-6">
-              <span class="inline-flex items-center justify-center w-8 h-8 text-xs font-mono font-bold text-white bg-gradient-to-r from-[#7C3AED] to-[#4F46E5] rounded-lg mb-4">04</span>
-              <h3 class="font-heading text-base font-semibold text-[#1A1A2E] dark:text-[#F0F0F5] mb-2">Iterate</h3>
-              <p class="text-sm text-[#6B6B8A] dark:text-[#7878A0] leading-relaxed">Continuous improvement based on real-world performance data.</p>
+            <div data-reveal class="tl-card">
+              <span class="tl-step-num">04</span>
+              <h3 class="mb-2">Iterate</h3>
+              <p class="text-sm leading-relaxed">Continuous improvement based on real-world performance data.</p>
             </div>
 
           </div>
@@ -223,65 +215,63 @@
       </section>
 
       <!-- Stats Strip -->
-      <section class="bg-[#F8F8FC] dark:bg-[#121220] border-y border-[#EBEBF0] dark:border-[#22222E] scanlines">
+      <section class="tl-section-alt border-y ">
         <div class="relative max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-12 z-10">
           <div class="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
-            <div>
-              <div class="font-mono text-3xl font-bold text-[#7C3AED] dark:stat-glow">7+</div>
-              <div class="text-xs font-mono uppercase tracking-wider text-[#6B6B8A] dark:text-[#7878A0] mt-2">AI Engineers</div>
+            <div class="stat-item-animate">
+              <div class="tl-stat-value">7+</div>
+              <div class="tl-stat-label">AI Engineers</div>
             </div>
-            <div>
-              <div class="font-mono text-3xl font-bold text-[#7C3AED] dark:stat-glow">5</div>
-              <div class="text-xs font-mono uppercase tracking-wider text-[#6B6B8A] dark:text-[#7878A0] mt-2">Countries</div>
+            <div class="stat-item-animate">
+              <div class="tl-stat-value">5</div>
+              <div class="tl-stat-label">Countries</div>
             </div>
-            <div>
-              <div class="font-mono text-3xl font-bold text-[#7C3AED] dark:stat-glow">100%</div>
-              <div class="text-xs font-mono uppercase tracking-wider text-[#6B6B8A] dark:text-[#7878A0] mt-2">Production-Grade</div>
+            <div class="stat-item-animate">
+              <div class="tl-stat-value">100%</div>
+              <div class="tl-stat-label">Production-Grade</div>
             </div>
-            <div>
-              <div class="font-mono text-3xl font-bold text-[#7C3AED] dark:stat-glow">24/7</div>
-              <div class="text-xs font-mono uppercase tracking-wider text-[#6B6B8A] dark:text-[#7878A0] mt-2">Global Coverage</div>
+            <div class="stat-item-animate">
+              <div class="tl-stat-value">24/7</div>
+              <div class="tl-stat-label">Global Coverage</div>
             </div>
           </div>
         </div>
       </section>
 
       <!-- Partners Section -->
-      <section id="partners" class="bg-white dark:bg-[#0B0B11]">
+      <section id="partners" class="">
         <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-20 sm:py-24">
           <div class="text-center mb-16">
-            <h2 class="font-heading text-3xl sm:text-4xl font-bold text-[#1A1A2E] dark:text-[#F0F0F5]">Our Partners</h2>
-            <p class="mt-4 text-[#6B6B8A] dark:text-[#7878A0]">Collaborating with industry leaders to deliver exceptional AI solutions</p>
+            <h2 class="tl-section-title ">Our Partners</h2>
+            <p class="mt-4 tl-muted">Collaborating with industry leaders to deliver exceptional AI solutions</p>
           </div>
 
           <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-16">
             <!-- ArtSync -->
-            <div class="bg-white dark:bg-[#1A1A26] border border-[#EBEBF0] dark:border-[#22222E] rounded-xl p-6 hover:border-[#7C3AED]/40 dark:hover:border-[#7C3AED]/40 card-futuristic">
-              <div class="flex items-center gap-4 mb-4">
-                <a href="https://trinverse.github.io/artsync/index.html" target="_blank" rel="noopener noreferrer" class="flex-shrink-0">
-                  <img src="assets/images/artsync.svg" alt="ArtSync Logo" class="w-12 h-12">
+            <div class="tl-card" data-reveal>
+              <div class="tl-partner-card-header">
+                <a href="https://artsync.live/" target="_blank" rel="noopener noreferrer" class="flex-shrink-0">
+                  <img src="assets/images/artsync-logo.png" alt="ArtSync" class="tl-partner-logo">
                 </a>
-                <h3 class="font-heading text-lg font-semibold text-[#1A1A2E] dark:text-[#F0F0F5]">ArtSync - Digital Excellence</h3>
               </div>
-              <p class="text-sm text-[#6B6B8A] dark:text-[#7878A0] leading-relaxed mb-4">Your partner in digital excellence, providing top-tier software development, data entry, and IT support services. ArtSync specializes in custom applications, enterprise solutions, and reliable IT support to help businesses thrive in the digital age.</p>
-              <a href="https://trinverse.github.io/artsync/index.html" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 px-4 py-2 text-sm font-medium text-white bg-gradient-to-r from-[#7C3AED] to-[#4F46E5] hover:from-[#6D28D9] hover:to-[#4338CA] rounded-lg transition-all shadow-lg shadow-[#7C3AED]/25">
+              <h3 class="font-heading text-lg font-semibold mb-2">ArtSync — Digital Excellence</h3>
+              <p class="text-sm leading-relaxed mb-4 tl-muted">Your partner in digital excellence, providing top-tier software development, data entry, and IT support services. ArtSync specializes in custom applications, enterprise solutions, and reliable IT support to help businesses thrive in the digital age.</p>
+              <a href="https://artsync.live/" target="_blank" rel="noopener noreferrer" class="tl-btn-accent">
                 Visit ArtSync
                 <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
               </a>
             </div>
 
             <!-- Corshift -->
-            <div class="bg-white dark:bg-[#1A1A26] border border-[#EBEBF0] dark:border-[#22222E] rounded-xl p-6 hover:border-[#7C3AED]/40 dark:hover:border-[#7C3AED]/40 card-futuristic">
-              <div class="flex items-center gap-4 mb-4">
-                <a href="https://corshift.com/" target="_blank" rel="noopener noreferrer" class="flex-shrink-0">
-                  <div class="w-12 h-12 flex items-center justify-center text-[#7C3AED]">
-                    <svg class="w-8 h-8" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M6.429 9.75L2.25 12l4.179 2.25m0-4.5l5.571 3 5.571-3m-11.142 0L2.25 7.5 12 2.25l9.75 5.25-4.179 2.25m0 0L21.75 12l-4.179 2.25m0 0l4.179 2.25L12 21.75 2.25 16.5l4.179-2.25m11.142 0l-5.571 3-5.571-3"/></svg>
-                  </div>
+            <div class="tl-card" data-reveal>
+              <div class="tl-partner-card-header">
+                <a href="https://corshift.com/" target="_blank" rel="noopener noreferrer" class="tl-partner-icon" aria-label="Corshift">
+                  <svg class="w-7 h-7" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M6.429 9.75L2.25 12l4.179 2.25m0-4.5l5.571 3 5.571-3m-11.142 0L2.25 7.5 12 2.25l9.75 5.25-4.179 2.25m0 0L21.75 12l-4.179 2.25m0 0l4.179 2.25L12 21.75 2.25 16.5l4.179-2.25m11.142 0l-5.571 3-5.571-3"/></svg>
                 </a>
-                <h3 class="font-heading text-lg font-semibold text-[#1A1A2E] dark:text-[#F0F0F5]">Corshift - UX Excellence</h3>
               </div>
-              <p class="text-sm text-[#6B6B8A] dark:text-[#7878A0] leading-relaxed mb-4">Specializing in user experience design and research, Corshift delivers intuitive, user-centered solutions that transform digital products. From wireframing to prototyping, they create experiences that delight users and drive business success.</p>
-              <a href="https://corshift.com/" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 px-4 py-2 text-sm font-medium text-white bg-gradient-to-r from-[#7C3AED] to-[#4F46E5] hover:from-[#6D28D9] hover:to-[#4338CA] rounded-lg transition-all shadow-lg shadow-[#7C3AED]/25">
+              <h3 class="font-heading text-lg font-semibold mb-2">Corshift — UX Excellence</h3>
+              <p class="text-sm  leading-relaxed mb-4">Specializing in user experience design and research, Corshift delivers intuitive, user-centered solutions that transform digital products. From wireframing to prototyping, they create experiences that delight users and drive business success.</p>
+              <a href="https://corshift.com/" target="_blank" rel="noopener noreferrer" class="tl-btn-accent">
                 Visit Corshift
                 <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
               </a>
@@ -291,39 +281,39 @@
           <!-- Partnership Benefits -->
           <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
             <div class="text-center">
-              <div class="w-10 h-10 mx-auto flex items-center justify-center text-[#7C3AED] mb-3">
+              <div class="w-10 h-10 mx-auto flex items-center justify-center  mb-3">
                 <svg class="w-8 h-8" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M11.42 15.17l-5.1-5.1a2.1 2.1 0 112.97-2.97l5.1 5.1M18.36 8.64a3.75 3.75 0 010 5.3l-1.06 1.06M15.89 11.17a3.75 3.75 0 015.3 0M3.34 17l2.83-2.83M8.56 14.17L5.73 17M12 21a9 9 0 110-18 9 9 0 010 18z"/></svg>
               </div>
-              <h3 class="font-heading text-base font-semibold text-[#1A1A2E] dark:text-[#F0F0F5] mb-2">Complementary Services</h3>
-              <p class="text-sm text-[#6B6B8A] dark:text-[#7878A0]">Our partnerships extend our AI capabilities across software development, design, and IT support.</p>
+              <h3 class="mb-2">Complementary Services</h3>
+              <p class="text-sm ">Our partnerships extend our AI capabilities across software development, design, and IT support.</p>
             </div>
             <div class="text-center">
-              <div class="w-10 h-10 mx-auto flex items-center justify-center text-[#7C3AED] mb-3">
+              <div class="w-10 h-10 mx-auto flex items-center justify-center  mb-3">
                 <svg class="w-8 h-8" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M3.75 3v11.25A2.25 2.25 0 006 16.5h2.25M3.75 3h-1.5m1.5 0h16.5m0 0h1.5m-1.5 0v11.25A2.25 2.25 0 0118 16.5h-2.25m-7.5 0h7.5m-7.5 0l-1 3m8.5-3l1 3m0 0l.5 1.5m-.5-1.5h-9.5m0 0l-.5 1.5m.75-9l3-3 2.148 2.148A12.061 12.061 0 0116.5 7.605"/></svg>
               </div>
-              <h3 class="font-heading text-base font-semibold text-[#1A1A2E] dark:text-[#F0F0F5] mb-2">Enhanced Solutions</h3>
-              <p class="text-sm text-[#6B6B8A] dark:text-[#7878A0]">Together we deliver comprehensive AI-powered solutions that combine innovation with reliability.</p>
+              <h3 class="mb-2">Enhanced Solutions</h3>
+              <p class="text-sm ">Together we deliver comprehensive AI-powered solutions that combine innovation with reliability.</p>
             </div>
             <div class="text-center">
-              <div class="w-10 h-10 mx-auto flex items-center justify-center text-[#7C3AED] mb-3">
+              <div class="w-10 h-10 mx-auto flex items-center justify-center  mb-3">
                 <svg class="w-8 h-8" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12z"/></svg>
               </div>
-              <h3 class="font-heading text-base font-semibold text-[#1A1A2E] dark:text-[#F0F0F5] mb-2">Shared Vision</h3>
-              <p class="text-sm text-[#6B6B8A] dark:text-[#7878A0]">Both companies share a commitment to empowering businesses with AI and building lasting partnerships.</p>
+              <h3 class="mb-2">Shared Vision</h3>
+              <p class="text-sm ">Both companies share a commitment to empowering businesses with AI and building lasting partnerships.</p>
             </div>
           </div>
         </div>
       </section>
 
       <!-- About + Contact Section -->
-      <section id="about" class="bg-[#F8F8FC] dark:bg-[#121220]">
+      <section id="about" class="tl-section-alt">
         <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-20 sm:py-24">
           <div class="grid grid-cols-1 md:grid-cols-2 gap-12 lg:gap-16">
 
             <!-- About -->
             <div>
-              <h2 class="font-heading text-2xl font-bold text-[#1A1A2E] dark:text-[#F0F0F5] mb-6">About Trinly</h2>
-              <div class="space-y-4 text-sm text-[#6B6B8A] dark:text-[#7878A0] leading-relaxed">
+              <h2 class="tl-section-title mb-6">About Trinly</h2>
+              <div class="space-y-4 text-sm  leading-relaxed">
                 <p>Trinly is an AI-first technology consultancy.</p>
                 <p>We specialize in building production-grade AI systems &mdash; from data preparation and model training to RAG pipelines, AI agents, and MLOps infrastructure.</p>
                 <p>With a globally distributed team of AI engineers across the US, Europe, India, and Brazil, we deliver systems that work in the real world, not just in notebooks.</p>
@@ -333,23 +323,23 @@
 
             <!-- Contact -->
             <div id="contact">
-              <h2 class="font-heading text-2xl font-bold text-[#1A1A2E] dark:text-[#F0F0F5] mb-6">Get in Touch</h2>
+              <h2 class="tl-section-title mb-6">Get in Touch</h2>
               <form id="contact-form" class="space-y-4">
                 <input type="hidden" name="access_key" value="a75ff973-c7a9-490c-a32f-caa4a4fbf860">
                 <div>
-                  <input type="text" name="name" placeholder="Your Name" required class="w-full px-4 py-3 text-sm bg-white dark:bg-[#1A1A26] border border-[#EBEBF0] dark:border-[#22222E] rounded-lg text-[#1A1A2E] dark:text-[#F0F0F5] placeholder-[#6B6B8A] dark:placeholder-[#7878A0] outline-none focus:border-[#7C3AED] dark:focus:border-[#7C3AED] transition-colors">
+                  <input type="text" name="name" placeholder="Your Name" required class="tl-input">
                 </div>
                 <div>
-                  <input type="email" name="email" placeholder="Your Email" required class="w-full px-4 py-3 text-sm bg-white dark:bg-[#1A1A26] border border-[#EBEBF0] dark:border-[#22222E] rounded-lg text-[#1A1A2E] dark:text-[#F0F0F5] placeholder-[#6B6B8A] dark:placeholder-[#7878A0] outline-none focus:border-[#7C3AED] dark:focus:border-[#7C3AED] transition-colors">
+                  <input type="email" name="email" placeholder="Your Email" required class="tl-input">
                 </div>
                 <div>
-                  <textarea name="message" rows="4" placeholder="Your Message" required class="w-full px-4 py-3 text-sm bg-white dark:bg-[#1A1A26] border border-[#EBEBF0] dark:border-[#22222E] rounded-lg text-[#1A1A2E] dark:text-[#F0F0F5] placeholder-[#6B6B8A] dark:placeholder-[#7878A0] outline-none focus:border-[#7C3AED] dark:focus:border-[#7C3AED] transition-colors resize-vertical"></textarea>
+                  <textarea name="message" rows="4" placeholder="Your Message" required class="tl-input resize-vertical"></textarea>
                 </div>
-                <button type="submit" class="px-6 py-3 text-sm font-medium text-white bg-gradient-to-r from-[#7C3AED] to-[#4F46E5] hover:from-[#6D28D9] hover:to-[#4338CA] rounded-lg transition-all shadow-lg shadow-[#7C3AED]/25">Send Message</button>
+                <button type="submit" class="tl-btn-accent">Send Message</button>
                 <div id="form-notification" style="display: none;" class="mt-4 px-4 py-3 rounded-lg text-sm"></div>
               </form>
 
-              <div class="mt-6 space-y-2 text-sm text-[#6B6B8A] dark:text-[#7878A0]">
+              <div class="mt-6 space-y-2 text-sm ">
                 <p class="flex items-center gap-2">
                   <svg class="w-4 h-4 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 002.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.055-1.173.417l-.97 1.293c-.282.376-.769.542-1.21.38a12.035 12.035 0 01-7.143-7.143c-.162-.441.004-.928.38-1.21l1.293-.97c.363-.271.527-.734.417-1.173L6.963 3.102a1.125 1.125 0 00-1.091-.852H4.5A2.25 2.25 0 002.25 4.5v2.25z"/></svg>
                   US: +1 919 578 49 44 | PT: +351 912 626 111
@@ -368,19 +358,19 @@
     </main>
 
     <!-- Footer -->
-    <footer class="border-t border-[#EBEBF0] dark:border-[#22222E] bg-white dark:bg-[#0B0B11]">
+    <footer class="tl-footer">
       <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-6 flex flex-col sm:flex-row items-center justify-between gap-2">
-        <p class="text-sm text-[#6B6B8A] dark:text-[#7878A0]">&copy; 2025 <a href="index.html" class="hover:text-[#7C3AED] transition-colors">Trinly</a>. All Rights Reserved.</p>
-        <p class="text-sm text-[#6B6B8A] dark:text-[#7878A0]">AI-First Technology Solutions</p>
+        <p class="text-sm ">&copy; 2025 <a href="index.html" class="hover:text-[var(--tl-accent)] transition-colors">Trinly</a>. All Rights Reserved.</p>
+        <p class="text-sm ">AI-First Technology Solutions</p>
       </div>
     </footer>
 
     <!-- Scroll to Top -->
-    <button id="scroll-top" class="hidden fixed bottom-6 right-6 z-50 p-3 bg-gradient-to-r from-[#7C3AED] to-[#4F46E5] text-white rounded-full shadow-lg shadow-[#7C3AED]/25 hover:from-[#6D28D9] hover:to-[#4338CA] transition-all" aria-label="Scroll to top">
+    <button id="scroll-top" class="hidden fixed bottom-6 right-6 z-50 p-3 text-white rounded-full" aria-label="Scroll to top">
       <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M5 15l7-7 7 7"/></svg>
     </button>
 
-    <script src="assets/js/app.js"></script>
+    <script src="assets/js/app.js?v=7"></script>
 
     <!-- Contact Form AJAX Submission -->
     <script>

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg viewBox="0 0 168 40" xmlns="http://www.w3.org/2000/svg" aria-label="Trinly">
+  <defs>
+    <linearGradient id="tl-mark-dark" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#E8956F"/>
+      <stop offset="100%" stop-color="#D97757"/>
+    </linearGradient>
+  </defs>
+  <g transform="translate(2, 2)">
+    <circle cx="18" cy="18" r="4.5" fill="url(#tl-mark-dark)"/>
+    <circle cx="18" cy="7" r="3" fill="#D97757" opacity="0.95"/>
+    <circle cx="27" cy="12" r="3" fill="#C96442" opacity="0.9"/>
+    <circle cx="27" cy="24" r="3" fill="#E8956F" opacity="0.9"/>
+    <circle cx="18" cy="29" r="3" fill="#D97757" opacity="0.95"/>
+    <circle cx="9" cy="24" r="3" fill="#C96442" opacity="0.9"/>
+    <circle cx="9" cy="12" r="3" fill="#E8956F" opacity="0.9"/>
+    <line x1="18" y1="18" x2="18" y2="7" stroke="#D97757" stroke-width="1.25" opacity="0.4"/>
+    <line x1="18" y1="18" x2="27" y2="12" stroke="#D97757" stroke-width="1.25" opacity="0.4"/>
+    <line x1="18" y1="18" x2="27" y2="24" stroke="#D97757" stroke-width="1.25" opacity="0.4"/>
+    <line x1="18" y1="18" x2="18" y2="29" stroke="#D97757" stroke-width="1.25" opacity="0.4"/>
+    <line x1="18" y1="18" x2="9" y2="24" stroke="#D97757" stroke-width="1.25" opacity="0.4"/>
+    <line x1="18" y1="18" x2="9" y2="12" stroke="#D97757" stroke-width="1.25" opacity="0.4"/>
+  </g>
+  <text x="44" y="27" font-family="Georgia, 'Times New Roman', serif" font-size="22" font-weight="400" fill="#F5F0EB" letter-spacing="-0.02em">Trinly</text>
+</svg>
