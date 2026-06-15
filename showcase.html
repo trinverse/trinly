@@ -20,12 +20,12 @@
     <link rel="icon" type="image/png" sizes="16x16" href="assets/images/favicons/favicon-16x16.png">
     <link rel="icon" type="image/svg+xml" href="favicon.svg">
     <link rel="manifest" href="site.webmanifest">
-    <meta name="msapplication-TileColor" content="#0B0B11">
+    <meta name="msapplication-TileColor" content="#1A1915">
     <meta name="msapplication-TileImage" content="assets/images/favicons/ms-icon-144x144.png">
-    <meta name="theme-color" content="#FFFFFF">
+    <meta name="theme-color" content="#FAF9F5">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,500;0,8..60,600;1,8..60,400&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
       tailwind.config = {
@@ -34,7 +34,7 @@
           extend: {
             fontFamily: {
               sans: ['Inter', 'system-ui', 'sans-serif'],
-              heading: ['Sora', 'system-ui', 'sans-serif'],
+              heading: ['Source Serif 4', 'system-ui', 'sans-serif'],
               mono: ['JetBrains Mono', 'monospace'],
             },
           }
@@ -43,50 +43,50 @@
     </script>
     <script src="assets/js/theme.js"></script>
     <script>window.__applyTheme();</script>
-    <link rel="stylesheet" href="assets/css/futuristic.css">
-    <style>html { background: #FFFFFF; } html.dark { background: #0B0B11; }</style>
+    <link rel="stylesheet" href="assets/css/futuristic.css?v=9">
+    <style>html { background: #FAF9F5; } html.dark { background: #1A1915; }</style>
   </head>
-  <body class="bg-white dark:bg-[#0B0B11] text-[#1A1A2E] dark:text-[#F0F0F5] font-sans">
+  <body class="tl-theme font-sans">
 
     <!-- Page Loader -->
-    <div id="page-loader" class="fixed inset-0 z-[100] flex items-center justify-center bg-white dark:bg-[#0B0B11] transition-opacity duration-300">
-      <div class="text-[#6B6B8A] dark:text-[#7878A0] text-sm font-mono">Loading...</div>
+    <div id="page-loader" class="fixed inset-0 z-[100] flex items-center justify-center  transition-opacity duration-300">
+      <div class=" text-sm font-mono">Loading...</div>
     </div>
 
     <!-- Navbar -->
-    <nav class="sticky top-0 z-50 bg-white/80 dark:bg-[#0B0B11]/80 backdrop-blur-xl border-b border-[#EBEBF0] dark:border-[#22222E]">
+    <nav class="tl-nav sticky top-0 z-50">
       <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="flex items-center justify-between h-16">
-          <a href="index.html" class="flex-shrink-0"><img src="assets/images/logo.svg" alt="Trinly" class="h-8"></a>
+          <a href="index.html" class="flex-shrink-0 tl-logo-link" aria-label="Trinly home"><img src="assets/images/logo-icon.svg?v=1" alt="" class="tl-logo-icon" aria-hidden="true"><span class="tl-logo-text">Trinly</span></a>
           <div class="hidden md:flex items-center gap-1">
-            <a href="index.html#about" class="px-3 py-2 text-sm text-[#1A1A2E] dark:text-[#F0F0F5] hover:bg-[#F8F8FC] dark:hover:bg-[#1A1A26] rounded-lg transition-colors">About</a>
-            <a href="services.html" class="px-3 py-2 text-sm text-[#1A1A2E] dark:text-[#F0F0F5] hover:bg-[#F8F8FC] dark:hover:bg-[#1A1A26] rounded-lg transition-colors">Services</a>
-            <a href="showcase.html" class="px-3 py-2 text-sm text-[#1A1A2E] dark:text-[#F0F0F5] hover:bg-[#F8F8FC] dark:hover:bg-[#1A1A26] rounded-lg transition-colors">Showcase</a>
-            <a href="team.html" class="px-3 py-2 text-sm text-[#1A1A2E] dark:text-[#F0F0F5] hover:bg-[#F8F8FC] dark:hover:bg-[#1A1A26] rounded-lg transition-colors">Our Team</a>
-            <a href="index.html#contact" class="ml-2 px-4 py-2 text-sm font-medium text-white bg-gradient-to-r from-[#7C3AED] to-[#4F46E5] hover:from-[#6D28D9] hover:to-[#4338CA] rounded-lg transition-all shadow-lg shadow-[#7C3AED]/25">Contact</a>
-            <button onclick="window.__toggleTheme()" class="ml-2 p-2 rounded-lg hover:bg-[#F8F8FC] dark:hover:bg-[#1A1A26] transition-colors" aria-label="Toggle theme">
+            <a href="index.html#about" class="tl-nav-link px-3 py-2 text-sm rounded-full">About</a>
+            <a href="services.html" class="tl-nav-link px-3 py-2 text-sm rounded-full">Services</a>
+            <a href="showcase.html" class="tl-nav-link px-3 py-2 text-sm rounded-full">Showcase</a>
+            <a href="team.html" class="tl-nav-link px-3 py-2 text-sm rounded-full">Our Team</a>
+            <a href="index.html#contact" class="tl-btn-accent ml-3">Contact</a>
+            <button onclick="window.__toggleTheme()" class="tl-theme-toggle ml-2 p-2 transition-colors" aria-label="Toggle theme">
               <svg class="w-5 h-5 hidden dark:block text-[#F0F0F5]" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"/></svg>
               <svg class="w-5 h-5 block dark:hidden text-[#1A1A2E]" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"/></svg>
             </button>
           </div>
           <div class="flex items-center gap-2 md:hidden">
-            <button onclick="window.__toggleTheme()" class="p-2 rounded-lg hover:bg-[#F8F8FC] dark:hover:bg-[#1A1A26] transition-colors" aria-label="Toggle theme">
+            <button onclick="window.__toggleTheme()" class="tl-theme-toggle p-2 transition-colors" aria-label="Toggle theme">
               <svg class="w-5 h-5 hidden dark:block text-[#F0F0F5]" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"/></svg>
               <svg class="w-5 h-5 block dark:hidden text-[#1A1A2E]" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"/></svg>
             </button>
-            <button id="mobile-menu-btn" aria-expanded="false" class="p-2 rounded-lg hover:bg-[#F8F8FC] dark:hover:bg-[#1A1A26] transition-colors">
-              <svg class="w-6 h-6 text-[#1A1A2E] dark:text-[#F0F0F5]" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16"/></svg>
+            <button id="mobile-menu-btn" aria-expanded="false" class="p-2 rounded-lg  transition-colors">
+              <svg class="w-6 h-6 " fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16"/></svg>
             </button>
           </div>
         </div>
       </div>
-      <div id="mobile-menu" class="hidden md:hidden border-t border-[#EBEBF0] dark:border-[#22222E] bg-white dark:bg-[#0B0B11]">
+      <div id="mobile-menu" class="hidden md:hidden border-t  ">
         <div class="px-4 py-3 space-y-1">
-          <a href="index.html#about" class="block px-3 py-2 text-sm text-[#1A1A2E] dark:text-[#F0F0F5] hover:bg-[#F8F8FC] dark:hover:bg-[#1A1A26] rounded-lg">About</a>
-          <a href="services.html" class="block px-3 py-2 text-sm text-[#1A1A2E] dark:text-[#F0F0F5] hover:bg-[#F8F8FC] dark:hover:bg-[#1A1A26] rounded-lg">Services</a>
-          <a href="showcase.html" class="block px-3 py-2 text-sm text-[#1A1A2E] dark:text-[#F0F0F5] hover:bg-[#F8F8FC] dark:hover:bg-[#1A1A26] rounded-lg">Showcase</a>
-          <a href="team.html" class="block px-3 py-2 text-sm text-[#1A1A2E] dark:text-[#F0F0F5] hover:bg-[#F8F8FC] dark:hover:bg-[#1A1A26] rounded-lg">Our Team</a>
-          <a href="index.html#contact" class="block px-3 py-2 text-sm font-medium text-white bg-gradient-to-r from-[#7C3AED] to-[#4F46E5] rounded-lg text-center">Contact</a>
+          <a href="index.html#about" class="block px-3 py-2 text-sm tl-nav-link rounded-lg">About</a>
+          <a href="services.html" class="block px-3 py-2 text-sm tl-nav-link rounded-lg">Services</a>
+          <a href="showcase.html" class="block px-3 py-2 text-sm tl-nav-link rounded-lg">Showcase</a>
+          <a href="team.html" class="block px-3 py-2 text-sm tl-nav-link rounded-lg">Our Team</a>
+          <a href="index.html#contact" class="tl-btn-accent block text-center">Contact</a>
         </div>
       </div>
     </nav>
@@ -94,122 +94,100 @@
     <main>
 
       <!-- Hero Section -->
-      <section class="relative bg-white dark:bg-[#0B0B11] overflow-hidden border-b border-[#EBEBF0] dark:border-[#22222E]">
-        <div class="absolute inset-0 overflow-hidden pointer-events-none">
-          <div class="glow-blob absolute top-1/2 left-1/3 -translate-x-1/2 -translate-y-1/2 w-[400px] h-[400px] bg-[#7C3AED]/10 dark:bg-[#7C3AED]/20 rounded-full blur-[120px]"></div>
-          <div class="glow-blob-2 absolute top-1/2 right-1/4 -translate-y-1/2 w-[300px] h-[300px] bg-[#7C3AED]/8 dark:bg-[#7C3AED]/12 rounded-full blur-[100px]"></div>
-        </div>
-        <div class="absolute inset-0 bg-grid pointer-events-none"></div>
-        <div class="relative max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-20 sm:py-28 text-center">
-          <span class="badge-neon inline-flex items-center gap-2 px-4 py-1.5 text-xs font-mono font-medium text-[#7C3AED] dark:text-[#22D3EE] bg-[#7C3AED]/10 rounded-full border border-[#7C3AED]/30 mb-8">OUR WORK</span>
-          <h1 class="font-heading text-4xl sm:text-5xl font-bold tracking-tight text-gradient">AI Systems We've Built</h1>
-          <p class="mt-4 max-w-2xl mx-auto text-lg text-[#6B6B8A] dark:text-[#7878A0]">From proof-of-concept to production &mdash; real AI systems solving real problems</p>
+      <section class="tl-page-hero">
+        <div class="tl-hero-glow"></div>
+        <div class="tl-page-hero-inner">
+          <span class="tl-eyebrow">Our work</span>
+          <h1>AI systems we've built</h1>
+          <p class="tl-page-hero-lead">From proof-of-concept to production — real AI systems solving real problems.</p>
         </div>
       </section>
 
       <!-- Showcase Grid -->
-      <section class="bg-[#F8F8FC] dark:bg-[#121220] bg-grid scanlines">
+      <section class="tl-section-alt">
         <div class="relative max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-20 sm:py-24 z-10">
           <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
 
-            <!-- Project 1: RAG System -->
-            <div data-reveal class="opacity-0 translate-y-4 transition-all duration-700 bg-white dark:bg-[#1A1A26] border border-[#EBEBF0] dark:border-[#22222E] rounded-xl overflow-hidden hover:border-[#7C3AED]/40 dark:hover:border-[#7C3AED]/40 card-futuristic">
-              <div class="h-48 bg-gradient-to-br from-[#7C3AED]/20 to-[#4F46E5]/20 dark:from-[#7C3AED]/10 dark:to-[#4F46E5]/10 flex items-center justify-center">
-                <span class="text-[#7C3AED]/50 dark:text-[#A78BFA]/30 font-mono text-sm">Screenshot coming soon</span>
-              </div>
-              <div class="p-6">
-                <span class="inline-block px-3 py-1 text-xs font-mono text-[#7C3AED] dark:text-[#A78BFA] bg-[#7C3AED]/10 rounded-full mb-3">RAG System</span>
-                <h3 class="font-heading text-lg font-semibold text-[#1A1A2E] dark:text-[#F0F0F5] mb-2">Enterprise Knowledge Base</h3>
-                <p class="text-sm text-[#6B6B8A] dark:text-[#7878A0] leading-relaxed">Production RAG pipeline enabling natural language queries across thousands of internal documents with sub-second response times.</p>
+            <div data-reveal class="tl-card tl-card-flush">
+              <div class="tl-showcase-thumb"><span>Screenshot coming soon</span></div>
+              <div class="tl-showcase-body">
+                <span class="tl-tag">RAG System</span>
+                <h3 class="mb-2">Enterprise Knowledge Base</h3>
+                <p class="text-sm leading-relaxed">Production RAG pipeline enabling natural language queries across thousands of internal documents with sub-second response times.</p>
                 <div class="mt-4 flex flex-wrap gap-2">
-                  <span class="px-2 py-1 text-xs font-mono text-[#6B6B8A] dark:text-[#7878A0] bg-[#F8F8FC] dark:bg-[#121220] rounded">Python</span>
-                  <span class="px-2 py-1 text-xs font-mono text-[#6B6B8A] dark:text-[#7878A0] bg-[#F8F8FC] dark:bg-[#121220] rounded">LangChain</span>
-                  <span class="px-2 py-1 text-xs font-mono text-[#6B6B8A] dark:text-[#7878A0] bg-[#F8F8FC] dark:bg-[#121220] rounded">Pinecone</span>
+                  <span class="tl-chip">Python</span>
+                  <span class="tl-chip">LangChain</span>
+                  <span class="tl-chip">Pinecone</span>
                 </div>
               </div>
             </div>
 
-            <!-- Project 2: Fine-tuned Model -->
-            <div data-reveal class="opacity-0 translate-y-4 transition-all duration-700 bg-white dark:bg-[#1A1A26] border border-[#EBEBF0] dark:border-[#22222E] rounded-xl overflow-hidden hover:border-[#7C3AED]/40 dark:hover:border-[#7C3AED]/40 card-futuristic">
-              <div class="h-48 bg-gradient-to-br from-[#4F46E5]/20 to-[#7C3AED]/20 dark:from-[#4F46E5]/10 dark:to-[#7C3AED]/10 flex items-center justify-center">
-                <span class="text-[#4F46E5]/50 dark:text-[#A78BFA]/30 font-mono text-sm">Screenshot coming soon</span>
-              </div>
-              <div class="p-6">
-                <span class="inline-block px-3 py-1 text-xs font-mono text-[#7C3AED] dark:text-[#A78BFA] bg-[#7C3AED]/10 rounded-full mb-3">Fine-tuned Model</span>
-                <h3 class="font-heading text-lg font-semibold text-[#1A1A2E] dark:text-[#F0F0F5] mb-2">Domain-Specific Language Model</h3>
-                <p class="text-sm text-[#6B6B8A] dark:text-[#7878A0] leading-relaxed">Custom fine-tuned model for specialized industry terminology and domain knowledge, achieving superior accuracy on domain-specific tasks.</p>
+            <div data-reveal class="tl-card tl-card-flush">
+              <div class="tl-showcase-thumb"><span>Screenshot coming soon</span></div>
+              <div class="tl-showcase-body">
+                <span class="tl-tag">Fine-tuned Model</span>
+                <h3 class="mb-2">Domain-Specific Language Model</h3>
+                <p class="text-sm leading-relaxed">Custom fine-tuned model for specialized industry terminology and domain knowledge, achieving superior accuracy on domain-specific tasks.</p>
                 <div class="mt-4 flex flex-wrap gap-2">
-                  <span class="px-2 py-1 text-xs font-mono text-[#6B6B8A] dark:text-[#7878A0] bg-[#F8F8FC] dark:bg-[#121220] rounded">PyTorch</span>
-                  <span class="px-2 py-1 text-xs font-mono text-[#6B6B8A] dark:text-[#7878A0] bg-[#F8F8FC] dark:bg-[#121220] rounded">LoRA</span>
-                  <span class="px-2 py-1 text-xs font-mono text-[#6B6B8A] dark:text-[#7878A0] bg-[#F8F8FC] dark:bg-[#121220] rounded">Hugging Face</span>
+                  <span class="tl-chip">PyTorch</span>
+                  <span class="tl-chip">LoRA</span>
+                  <span class="tl-chip">Hugging Face</span>
                 </div>
               </div>
             </div>
 
-            <!-- Project 3: AI Agent -->
-            <div data-reveal class="opacity-0 translate-y-4 transition-all duration-700 bg-white dark:bg-[#1A1A26] border border-[#EBEBF0] dark:border-[#22222E] rounded-xl overflow-hidden hover:border-[#7C3AED]/40 dark:hover:border-[#7C3AED]/40 card-futuristic">
-              <div class="h-48 bg-gradient-to-br from-[#7C3AED]/15 to-[#6D28D9]/25 dark:from-[#7C3AED]/10 dark:to-[#6D28D9]/15 flex items-center justify-center">
-                <span class="text-[#7C3AED]/50 dark:text-[#A78BFA]/30 font-mono text-sm">Screenshot coming soon</span>
-              </div>
-              <div class="p-6">
-                <span class="inline-block px-3 py-1 text-xs font-mono text-[#7C3AED] dark:text-[#A78BFA] bg-[#7C3AED]/10 rounded-full mb-3">AI Agent</span>
-                <h3 class="font-heading text-lg font-semibold text-[#1A1A2E] dark:text-[#F0F0F5] mb-2">Autonomous Workflow Agent</h3>
-                <p class="text-sm text-[#6B6B8A] dark:text-[#7878A0] leading-relaxed">Multi-step AI agent with tool use capabilities that automates complex business workflows, reducing manual processing time significantly.</p>
+            <div data-reveal class="tl-card tl-card-flush">
+              <div class="tl-showcase-thumb"><span>Screenshot coming soon</span></div>
+              <div class="tl-showcase-body">
+                <span class="tl-tag">AI Agent</span>
+                <h3 class="mb-2">Autonomous Workflow Agent</h3>
+                <p class="text-sm leading-relaxed">Multi-step AI agent with tool use capabilities that automates complex business workflows, reducing manual processing time significantly.</p>
                 <div class="mt-4 flex flex-wrap gap-2">
-                  <span class="px-2 py-1 text-xs font-mono text-[#6B6B8A] dark:text-[#7878A0] bg-[#F8F8FC] dark:bg-[#121220] rounded">Claude API</span>
-                  <span class="px-2 py-1 text-xs font-mono text-[#6B6B8A] dark:text-[#7878A0] bg-[#F8F8FC] dark:bg-[#121220] rounded">Python</span>
-                  <span class="px-2 py-1 text-xs font-mono text-[#6B6B8A] dark:text-[#7878A0] bg-[#F8F8FC] dark:bg-[#121220] rounded">FastAPI</span>
+                  <span class="tl-chip">Claude API</span>
+                  <span class="tl-chip">Python</span>
+                  <span class="tl-chip">FastAPI</span>
                 </div>
               </div>
             </div>
 
-            <!-- Project 4: Data Pipeline -->
-            <div data-reveal class="opacity-0 translate-y-4 transition-all duration-700 bg-white dark:bg-[#1A1A26] border border-[#EBEBF0] dark:border-[#22222E] rounded-xl overflow-hidden hover:border-[#7C3AED]/40 dark:hover:border-[#7C3AED]/40 card-futuristic">
-              <div class="h-48 bg-gradient-to-br from-[#4F46E5]/15 to-[#4338CA]/25 dark:from-[#4F46E5]/10 dark:to-[#4338CA]/15 flex items-center justify-center">
-                <span class="text-[#4F46E5]/50 dark:text-[#A78BFA]/30 font-mono text-sm">Screenshot coming soon</span>
-              </div>
-              <div class="p-6">
-                <span class="inline-block px-3 py-1 text-xs font-mono text-[#7C3AED] dark:text-[#A78BFA] bg-[#7C3AED]/10 rounded-full mb-3">Data Pipeline</span>
-                <h3 class="font-heading text-lg font-semibold text-[#1A1A2E] dark:text-[#F0F0F5] mb-2">ML Data Infrastructure</h3>
-                <p class="text-sm text-[#6B6B8A] dark:text-[#7878A0] leading-relaxed">End-to-end data pipeline handling ingestion, cleaning, transformation, and feature engineering for continuous model training and evaluation.</p>
+            <div data-reveal class="tl-card tl-card-flush">
+              <div class="tl-showcase-thumb"><span>Screenshot coming soon</span></div>
+              <div class="tl-showcase-body">
+                <span class="tl-tag">Data Pipeline</span>
+                <h3 class="mb-2">ML Data Infrastructure</h3>
+                <p class="text-sm leading-relaxed">End-to-end data pipeline handling ingestion, cleaning, transformation, and feature engineering for continuous model training and evaluation.</p>
                 <div class="mt-4 flex flex-wrap gap-2">
-                  <span class="px-2 py-1 text-xs font-mono text-[#6B6B8A] dark:text-[#7878A0] bg-[#F8F8FC] dark:bg-[#121220] rounded">Apache Airflow</span>
-                  <span class="px-2 py-1 text-xs font-mono text-[#6B6B8A] dark:text-[#7878A0] bg-[#F8F8FC] dark:bg-[#121220] rounded">dbt</span>
-                  <span class="px-2 py-1 text-xs font-mono text-[#6B6B8A] dark:text-[#7878A0] bg-[#F8F8FC] dark:bg-[#121220] rounded">Snowflake</span>
+                  <span class="tl-chip">Apache Airflow</span>
+                  <span class="tl-chip">dbt</span>
+                  <span class="tl-chip">Snowflake</span>
                 </div>
               </div>
             </div>
 
-            <!-- Project 5: Computer Vision -->
-            <div data-reveal class="opacity-0 translate-y-4 transition-all duration-700 bg-white dark:bg-[#1A1A26] border border-[#EBEBF0] dark:border-[#22222E] rounded-xl overflow-hidden hover:border-[#7C3AED]/40 dark:hover:border-[#7C3AED]/40 card-futuristic">
-              <div class="h-48 bg-gradient-to-br from-[#6D28D9]/15 to-[#7C3AED]/25 dark:from-[#6D28D9]/10 dark:to-[#7C3AED]/15 flex items-center justify-center">
-                <span class="text-[#6D28D9]/50 dark:text-[#A78BFA]/30 font-mono text-sm">Screenshot coming soon</span>
-              </div>
-              <div class="p-6">
-                <span class="inline-block px-3 py-1 text-xs font-mono text-[#7C3AED] dark:text-[#A78BFA] bg-[#7C3AED]/10 rounded-full mb-3">Computer Vision</span>
-                <h3 class="font-heading text-lg font-semibold text-[#1A1A2E] dark:text-[#F0F0F5] mb-2">Aerial Image Analysis</h3>
-                <p class="text-sm text-[#6B6B8A] dark:text-[#7878A0] leading-relaxed">Computer vision system for drone-captured imagery, performing object detection, terrain classification, and automated 3D reconstruction.</p>
+            <div data-reveal class="tl-card tl-card-flush">
+              <div class="tl-showcase-thumb"><span>Screenshot coming soon</span></div>
+              <div class="tl-showcase-body">
+                <span class="tl-tag">Computer Vision</span>
+                <h3 class="mb-2">Aerial Image Analysis</h3>
+                <p class="text-sm leading-relaxed">Computer vision system for drone-captured imagery, performing object detection, terrain classification, and automated 3D reconstruction.</p>
                 <div class="mt-4 flex flex-wrap gap-2">
-                  <span class="px-2 py-1 text-xs font-mono text-[#6B6B8A] dark:text-[#7878A0] bg-[#F8F8FC] dark:bg-[#121220] rounded">OpenCV</span>
-                  <span class="px-2 py-1 text-xs font-mono text-[#6B6B8A] dark:text-[#7878A0] bg-[#F8F8FC] dark:bg-[#121220] rounded">YOLO</span>
-                  <span class="px-2 py-1 text-xs font-mono text-[#6B6B8A] dark:text-[#7878A0] bg-[#F8F8FC] dark:bg-[#121220] rounded">TensorFlow</span>
+                  <span class="tl-chip">OpenCV</span>
+                  <span class="tl-chip">YOLO</span>
+                  <span class="tl-chip">TensorFlow</span>
                 </div>
               </div>
             </div>
 
-            <!-- Project 6: MLOps -->
-            <div data-reveal class="opacity-0 translate-y-4 transition-all duration-700 bg-white dark:bg-[#1A1A26] border border-[#EBEBF0] dark:border-[#22222E] rounded-xl overflow-hidden hover:border-[#7C3AED]/40 dark:hover:border-[#7C3AED]/40 card-futuristic">
-              <div class="h-48 bg-gradient-to-br from-[#4338CA]/15 to-[#4F46E5]/25 dark:from-[#4338CA]/10 dark:to-[#4F46E5]/15 flex items-center justify-center">
-                <span class="text-[#4338CA]/50 dark:text-[#A78BFA]/30 font-mono text-sm">Screenshot coming soon</span>
-              </div>
-              <div class="p-6">
-                <span class="inline-block px-3 py-1 text-xs font-mono text-[#7C3AED] dark:text-[#A78BFA] bg-[#7C3AED]/10 rounded-full mb-3">MLOps</span>
-                <h3 class="font-heading text-lg font-semibold text-[#1A1A2E] dark:text-[#F0F0F5] mb-2">AI Deployment Platform</h3>
-                <p class="text-sm text-[#6B6B8A] dark:text-[#7878A0] leading-relaxed">Complete MLOps infrastructure for model versioning, automated testing, canary deployments, and real-time performance monitoring.</p>
+            <div data-reveal class="tl-card tl-card-flush">
+              <div class="tl-showcase-thumb"><span>Screenshot coming soon</span></div>
+              <div class="tl-showcase-body">
+                <span class="tl-tag">MLOps</span>
+                <h3 class="mb-2">AI Deployment Platform</h3>
+                <p class="text-sm leading-relaxed">Complete MLOps infrastructure for model versioning, automated testing, canary deployments, and real-time performance monitoring.</p>
                 <div class="mt-4 flex flex-wrap gap-2">
-                  <span class="px-2 py-1 text-xs font-mono text-[#6B6B8A] dark:text-[#7878A0] bg-[#F8F8FC] dark:bg-[#121220] rounded">Kubernetes</span>
-                  <span class="px-2 py-1 text-xs font-mono text-[#6B6B8A] dark:text-[#7878A0] bg-[#F8F8FC] dark:bg-[#121220] rounded">MLflow</span>
-                  <span class="px-2 py-1 text-xs font-mono text-[#6B6B8A] dark:text-[#7878A0] bg-[#F8F8FC] dark:bg-[#121220] rounded">Terraform</span>
+                  <span class="tl-chip">Kubernetes</span>
+                  <span class="tl-chip">MLflow</span>
+                  <span class="tl-chip">Terraform</span>
                 </div>
               </div>
             </div>
@@ -219,12 +197,12 @@
       </section>
 
       <!-- CTA Section -->
-      <section class="bg-white dark:bg-[#0B0B11]">
+      <section class="">
         <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 py-20 sm:py-24 text-center">
-          <h2 class="font-heading text-3xl sm:text-4xl font-bold text-[#1A1A2E] dark:text-[#F0F0F5]">Have a Project in Mind?</h2>
-          <p class="mt-6 text-[#6B6B8A] dark:text-[#7878A0] leading-relaxed">Whether you're starting from scratch or scaling an existing AI system, we'd love to hear about your challenge.</p>
+          <h2 class="tl-section-title ">Have a Project in Mind?</h2>
+          <p class="mt-6  leading-relaxed">Whether you're starting from scratch or scaling an existing AI system, we'd love to hear about your challenge.</p>
           <div class="mt-10">
-            <a href="index.html#contact" class="inline-flex items-center gap-2 px-6 py-3 text-sm font-medium text-white bg-gradient-to-r from-[#7C3AED] to-[#4F46E5] hover:from-[#6D28D9] hover:to-[#4338CA] rounded-lg transition-all shadow-lg shadow-[#7C3AED]/25">
+            <a href="index.html#contact" class="tl-btn-accent">
               Let's Talk
               <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
             </a>
@@ -235,18 +213,18 @@
     </main>
 
     <!-- Footer -->
-    <footer class="border-t border-[#EBEBF0] dark:border-[#22222E] bg-white dark:bg-[#0B0B11]">
+    <footer class="tl-footer">
       <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-6 flex flex-col sm:flex-row items-center justify-between gap-2">
-        <p class="text-sm text-[#6B6B8A] dark:text-[#7878A0]">&copy; 2025 <a href="index.html" class="hover:text-[#7C3AED] transition-colors">Trinly</a>. All Rights Reserved.</p>
-        <p class="text-sm text-[#6B6B8A] dark:text-[#7878A0]">AI-First Technology Solutions</p>
+        <p class="text-sm ">&copy; 2025 <a href="index.html" class="hover:text-[var(--tl-accent)] transition-colors">Trinly</a>. All Rights Reserved.</p>
+        <p class="text-sm ">AI-First Technology Solutions</p>
       </div>
     </footer>
 
     <!-- Scroll to Top -->
-    <button id="scroll-top" class="hidden fixed bottom-6 right-6 z-50 p-3 bg-gradient-to-r from-[#7C3AED] to-[#4F46E5] text-white rounded-full shadow-lg shadow-[#7C3AED]/25 hover:from-[#6D28D9] hover:to-[#4338CA] transition-all" aria-label="Scroll to top">
+    <button id="scroll-top" class="hidden fixed bottom-6 right-6 z-50 p-3 text-white rounded-full" aria-label="Scroll to top">
       <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M5 15l7-7 7 7"/></svg>
     </button>
 
-    <script src="assets/js/app.js"></script>
+    <script src="assets/js/app.js?v=7"></script>
   </body>
 </html>
