@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en-US" dir="ltr" class="">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Open Air Construction | Trinly Showcase</title>
+    <meta name="description" content="Open Air Construction — Charlotte deck and outdoor-living contractor website built with Next.js 16, lead capture, and local SEO.">
+    <link rel="icon" type="image/svg+xml" href="../favicon.svg">
+    <link rel="manifest" href="../site.webmanifest">
+    <meta name="theme-color" content="#FAF9F5">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,500;0,8..60,600;1,8..60,400&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        darkMode: 'class',
+        theme: {
+          extend: {
+            fontFamily: {
+              sans: ['Inter', 'system-ui', 'sans-serif'],
+              heading: ['Source Serif 4', 'system-ui', 'sans-serif'],
+            },
+          }
+        }
+      }
+    </script>
+    <script src="../assets/js/theme.js"></script>
+    <script>window.__applyTheme();</script>
+    <link rel="stylesheet" href="../assets/css/futuristic.css?v=10">
+    <style>html { background: #FAF9F5; } html.dark { background: #1A1915; }</style>
+  </head>
+  <body class="tl-theme font-sans">
+
+    <div id="page-loader" class="fixed inset-0 z-[100] flex items-center justify-center transition-opacity duration-300">
+      <div class="text-sm font-mono">Loading...</div>
+    </div>
+
+    <nav class="tl-nav sticky top-0 z-50">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex items-center justify-between h-16">
+          <a href="../index.html" class="flex-shrink-0 tl-logo-link" aria-label="Trinly home"><img src="../assets/images/logo-icon.svg?v=1" alt="" class="tl-logo-icon" aria-hidden="true"><span class="tl-logo-text">Trinly</span></a>
+          <div class="hidden md:flex items-center gap-1">
+            <a href="../index.html#about" class="tl-nav-link px-3 py-2 text-sm rounded-full">About</a>
+            <a href="../services.html" class="tl-nav-link px-3 py-2 text-sm rounded-full">Services</a>
+            <a href="../showcase.html" class="tl-nav-link px-3 py-2 text-sm rounded-full">Showcase</a>
+            <a href="../team.html" class="tl-nav-link px-3 py-2 text-sm rounded-full">Our Team</a>
+            <a href="../index.html#contact" class="tl-btn-accent ml-3">Contact</a>
+            <button onclick="window.__toggleTheme()" class="tl-theme-toggle ml-2 p-2 transition-colors" aria-label="Toggle theme">
+              <svg class="w-5 h-5 hidden dark:block text-[#F0F0F5]" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"/></svg>
+              <svg class="w-5 h-5 block dark:hidden text-[#1A1A2E]" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"/></svg>
+            </button>
+          </div>
+          <div class="flex items-center gap-2 md:hidden">
+            <button onclick="window.__toggleTheme()" class="tl-theme-toggle p-2 transition-colors" aria-label="Toggle theme">
+              <svg class="w-5 h-5 hidden dark:block text-[#F0F0F5]" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"/></svg>
+              <svg class="w-5 h-5 block dark:hidden text-[#1A1A2E]" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"/></svg>
+            </button>
+            <button id="mobile-menu-btn" aria-expanded="false" class="p-2 rounded-lg transition-colors">
+              <svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16"/></svg>
+            </button>
+          </div>
+        </div>
+      </div>
+      <div id="mobile-menu" class="hidden md:hidden border-t">
+        <div class="px-4 py-3 space-y-1">
+          <a href="../index.html#about" class="block px-3 py-2 text-sm tl-nav-link rounded-lg">About</a>
+          <a href="../services.html" class="block px-3 py-2 text-sm tl-nav-link rounded-lg">Services</a>
+          <a href="../showcase.html" class="block px-3 py-2 text-sm tl-nav-link rounded-lg">Showcase</a>
+          <a href="../team.html" class="block px-3 py-2 text-sm tl-nav-link rounded-lg">Our Team</a>
+          <a href="../index.html#contact" class="tl-btn-accent block text-center">Contact</a>
+        </div>
+      </div>
+    </nav>
+
+    <main>
+      <section class="tl-section-alt">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-20">
+
+          <nav class="tl-project-breadcrumb" aria-label="Breadcrumb">
+            <a href="../index.html">Home</a>
+            <span aria-hidden="true">/</span>
+            <a href="../showcase.html">Showcase</a>
+            <span aria-hidden="true">/</span>
+            <span>Open Air Construction</span>
+          </nav>
+
+          <div class="tl-project-hero-img">
+            <img src="../assets/images/showcase/open-air-construction.png" alt="Open Air Construction homepage">
+          </div>
+
+          <div class="tl-project-title-block">
+            <div class="flex flex-wrap gap-2">
+              <span class="tl-tag">Contractor Website</span>
+              <span class="tl-tag">Lead Capture</span>
+              <span class="tl-tag">Local SEO</span>
+            </div>
+            <h1>Open Air Construction</h1>
+            <p class="tl-project-lead">Charlotte deck and outdoor-living contractor website — built for conversions, content, and search visibility.</p>
+          </div>
+
+          <div class="tl-project-body">
+            <p><strong>Open Air Construction</strong> is a production-grade marketing site for a Charlotte-area deck and outdoor-living contractor. It combines a polished Material 3 design system with typed content, an MDX blog, and a full lead-capture pipeline — from first visit to inbox notification.</p>
+
+            <h3>The Challenge</h3>
+            <p>Local contractors need more than a brochure site: they need fast pages, trust signals, service-area coverage, and a reliable way to turn consultation requests into actionable leads — without sacrificing editorial control or SEO fundamentals.</p>
+
+            <h3>What We Built</h3>
+            <p>A Next.js 16 App Router application with Tailwind CSS v4 and a custom Material 3 token layer. Content lives in typed TypeScript modules and MDX blog posts, so updates are safe, structured, and rebuild automatically in development. Light and dark themes are handled via <code>next-themes</code> with a header toggle.</p>
+
+            <h3>Key Capabilities</h3>
+            <div class="tl-feature-grid">
+              <div class="tl-feature-card">
+                <strong>Typed Content Layer</strong>
+                Services, team, FAQs, values, and site metadata in `content/*.ts` — TypeScript catches structural mistakes at build time.
+              </div>
+              <div class="tl-feature-card">
+                <strong>MDX Blog</strong>
+                Drop-in `.mdx` posts with frontmatter; loaded by a custom blog loader and rendered with `next-mdx-remote`.
+              </div>
+              <div class="tl-feature-card">
+                <strong>Lead Pipeline</strong>
+                Contact form Server Action with Zod validation, Postgres persistence, and Resend email notifications.
+              </div>
+              <div class="tl-feature-card">
+                <strong>Admin Inbox</strong>
+                Protected `/admin` area with bcrypt auth, lead filtering, status management, and CRM sync hooks.
+              </div>
+              <div class="tl-feature-card">
+                <strong>Integration Seams</strong>
+                JobTread CRM and AI enrichment gateways wired into the lead flow — activate by setting env keys, no plumbing changes.
+              </div>
+              <div class="tl-feature-card">
+                <strong>Technical SEO</strong>
+                LocalBusiness + Service + FAQ JSON-LD, sitemap, robots.txt, dynamic OG images, and Lighthouse SEO score of 100.
+              </div>
+            </div>
+
+            <h3>Core Stack</h3>
+            <div class="tl-tech-grid">
+              <div class="tl-tech-category">
+                <h4>Frontend</h4>
+                <p>Next.js 16, TypeScript, Tailwind CSS v4, Material 3 tokens, next-themes</p>
+              </div>
+              <div class="tl-tech-category">
+                <h4>Content</h4>
+                <p>Typed TS modules, MDX blog, next-mdx-remote/rsc</p>
+              </div>
+              <div class="tl-tech-category">
+                <h4>Backend &amp; Data</h4>
+                <p>Server Actions, Zod, Postgres (Neon), Alembic migrations</p>
+              </div>
+              <div class="tl-tech-category">
+                <h4>Ops &amp; Quality</h4>
+                <p>Resend email, Vercel deploy, Vitest + Testing Library</p>
+              </div>
+            </div>
+
+            <h3>Highlights</h3>
+            <ul class="tl-highlights-list">
+              <li><strong>Editor-friendly workflow:</strong> Non-developers can add blog posts and update service copy without touching layout code.</li>
+              <li><strong>Lead-to-CRM ready:</strong> Email notifications today; JobTread and AI enrichment activate with environment keys.</li>
+              <li><strong>Local search foundations:</strong> Structured data, canonical URLs, and a post-launch checklist for Search Console and Google Business Profile.</li>
+            </ul>
+
+            <div class="tl-project-cta">
+              <a href="https://oac-five.vercel.app/" class="tl-btn-primary" target="_blank" rel="noopener noreferrer">
+                Visit live site
+                <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/></svg>
+              </a>
+              <a href="../showcase.html" class="tl-btn-secondary">
+                <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M10 19l-7-7m0 0l7-7m-7 7h18"/></svg>
+                Back to showcase
+              </a>
+            </div>
+          </div>
+
+        </div>
+      </section>
+    </main>
+
+    <footer class="tl-footer">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-6 flex flex-col sm:flex-row items-center justify-between gap-2">
+        <p class="text-sm">&copy; 2025 <a href="../index.html" class="hover:text-[var(--tl-accent)] transition-colors">Trinly</a>. All Rights Reserved.</p>
+        <p class="text-sm">AI-First Technology Solutions</p>
+      </div>
+    </footer>
+
+    <button id="scroll-top" class="hidden fixed bottom-6 right-6 z-50 p-3 text-white rounded-full" aria-label="Scroll to top">
+      <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M5 15l7-7 7 7"/></svg>
+    </button>
+
+    <script src="../assets/js/app.js?v=7"></script>
+  </body>
+</html>

@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en-US" dir="ltr" class="">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Clout Aesthetics | Trinly Showcase</title>
+    <meta name="description" content="Clout Aesthetics — prestige optimization ecosystem for cosmetic medical professionals. Built by Trinly.">
+    <link rel="icon" type="image/svg+xml" href="../favicon.svg">
+    <link rel="manifest" href="../site.webmanifest">
+    <meta name="theme-color" content="#FAF9F5">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,500;0,8..60,600;1,8..60,400&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        darkMode: 'class',
+        theme: {
+          extend: {
+            fontFamily: {
+              sans: ['Inter', 'system-ui', 'sans-serif'],
+              heading: ['Source Serif 4', 'system-ui', 'sans-serif'],
+            },
+          }
+        }
+      }
+    </script>
+    <script src="../assets/js/theme.js"></script>
+    <script>window.__applyTheme();</script>
+    <link rel="stylesheet" href="../assets/css/futuristic.css?v=10">
+    <style>html { background: #FAF9F5; } html.dark { background: #1A1915; }</style>
+  </head>
+  <body class="tl-theme font-sans">
+
+    <div id="page-loader" class="fixed inset-0 z-[100] flex items-center justify-center transition-opacity duration-300">
+      <div class="text-sm font-mono">Loading...</div>
+    </div>
+
+    <nav class="tl-nav sticky top-0 z-50">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex items-center justify-between h-16">
+          <a href="../index.html" class="flex-shrink-0 tl-logo-link" aria-label="Trinly home"><img src="../assets/images/logo-icon.svg?v=1" alt="" class="tl-logo-icon" aria-hidden="true"><span class="tl-logo-text">Trinly</span></a>
+          <div class="hidden md:flex items-center gap-1">
+            <a href="../index.html#about" class="tl-nav-link px-3 py-2 text-sm rounded-full">About</a>
+            <a href="../services.html" class="tl-nav-link px-3 py-2 text-sm rounded-full">Services</a>
+            <a href="../showcase.html" class="tl-nav-link px-3 py-2 text-sm rounded-full">Showcase</a>
+            <a href="../team.html" class="tl-nav-link px-3 py-2 text-sm rounded-full">Our Team</a>
+            <a href="../index.html#contact" class="tl-btn-accent ml-3">Contact</a>
+            <button onclick="window.__toggleTheme()" class="tl-theme-toggle ml-2 p-2 transition-colors" aria-label="Toggle theme">
+              <svg class="w-5 h-5 hidden dark:block text-[#F0F0F5]" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"/></svg>
+              <svg class="w-5 h-5 block dark:hidden text-[#1A1A2E]" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"/></svg>
+            </button>
+          </div>
+          <div class="flex items-center gap-2 md:hidden">
+            <button onclick="window.__toggleTheme()" class="tl-theme-toggle p-2 transition-colors" aria-label="Toggle theme">
+              <svg class="w-5 h-5 hidden dark:block text-[#F0F0F5]" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"/></svg>
+              <svg class="w-5 h-5 block dark:hidden text-[#1A1A2E]" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"/></svg>
+            </button>
+            <button id="mobile-menu-btn" aria-expanded="false" class="p-2 rounded-lg transition-colors">
+              <svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16"/></svg>
+            </button>
+          </div>
+        </div>
+      </div>
+      <div id="mobile-menu" class="hidden md:hidden border-t">
+        <div class="px-4 py-3 space-y-1">
+          <a href="../index.html#about" class="block px-3 py-2 text-sm tl-nav-link rounded-lg">About</a>
+          <a href="../services.html" class="block px-3 py-2 text-sm tl-nav-link rounded-lg">Services</a>
+          <a href="../showcase.html" class="block px-3 py-2 text-sm tl-nav-link rounded-lg">Showcase</a>
+          <a href="../team.html" class="block px-3 py-2 text-sm tl-nav-link rounded-lg">Our Team</a>
+          <a href="../index.html#contact" class="tl-btn-accent block text-center">Contact</a>
+        </div>
+      </div>
+    </nav>
+
+    <main>
+      <section class="tl-section-alt">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-20">
+
+          <nav class="tl-project-breadcrumb" aria-label="Breadcrumb">
+            <a href="../index.html">Home</a>
+            <span aria-hidden="true">/</span>
+            <a href="../showcase.html">Showcase</a>
+            <span aria-hidden="true">/</span>
+            <span>Clout Aesthetics</span>
+          </nav>
+
+          <div class="tl-project-hero-img">
+            <img src="../assets/images/showcase/clout.png" alt="Clout Aesthetics intelligence interface">
+          </div>
+
+          <div class="tl-project-title-block">
+            <div class="flex flex-wrap gap-2">
+              <span class="tl-tag">Neural SaaS</span>
+              <span class="tl-tag">Intelligence</span>
+              <span class="tl-tag">Structural Arch</span>
+            </div>
+            <h1>Clout Aesthetics</h1>
+            <p class="tl-project-lead">Prestige Optimization Ecosystem for High-End Medicine</p>
+          </div>
+
+          <div class="tl-project-body">
+            <p><strong>Clout</strong> is a comprehensive intelligence platform enabling cosmetic medical professionals to monitor, amplify, and professionally manage their industry standing through data aggregation and adaptive scoring.</p>
+
+            <h3>Architectural Challenge</h3>
+            <p>Elite aesthetic providers often face fragmented feedback across multiple digital domains, leaving them without a unified metric to evaluate or enhance their market reputation. Manual synthesis is inefficient and lacks predictive utility.</p>
+
+            <h3>The Intelligence Response</h3>
+            <p>Clout synthesizes multi-channel feedback data, executes advanced sentiment evaluation, and distills the output into the <strong>Clout Index</strong>—a precision metric weighted across peer recognition (40%), patient feedback (30%), certifications (20%), and market presence (10%).</p>
+
+            <h3>Strategic Capabilities</h3>
+            <div class="tl-feature-grid">
+              <div class="tl-feature-card">
+                <strong>Omni-Channel Synthesis</strong>
+                Automated data harvesting from elite review sources with integrity-based deduplication logic.
+              </div>
+              <div class="tl-feature-card">
+                <strong>Neural Sentiment Evaluation</strong>
+                Advanced NLP extraction of emotional vectors, category-specific trends, and behavioral indicators.
+              </div>
+              <div class="tl-feature-card">
+                <strong>The Clout Index</strong>
+                Proprietary multi-factor prestige scoring with deep temporal tracking and logarithmic normalization.
+              </div>
+              <div class="tl-feature-card">
+                <strong>Peer Credibility Framework</strong>
+                Professional-to-professional accreditation system featuring relationship mapping and prestige weighting.
+              </div>
+              <div class="tl-feature-card">
+                <strong>Operational Telemetry</strong>
+                High-definition visualization of sentiment velocity, competitive positioning, and architectural benchmarks.
+              </div>
+              <div class="tl-feature-card">
+                <strong>Real-Time Pulse</strong>
+                High-frequency logic streams for instant transmission of prestige changes and network alerts.
+              </div>
+            </div>
+
+            <h3>Core Stack</h3>
+            <div class="tl-tech-grid">
+              <div class="tl-tech-category">
+                <h4>Interface Layer</h4>
+                <p>React, TypeSafe, Fluid CSS, Real-Time Telemetry</p>
+              </div>
+              <div class="tl-tech-category">
+                <h4>Processing Core</h4>
+                <p>FastAPI, Neural Compute Engine, Structured Logic</p>
+              </div>
+              <div class="tl-tech-category">
+                <h4>Neural Layer</h4>
+                <p>Advanced Generative Contexts, Emotional Vectoring</p>
+              </div>
+              <div class="tl-tech-category">
+                <h4>Base Ops</h4>
+                <p>Containerized Scalability, Orchestrated Release</p>
+              </div>
+            </div>
+
+            <h3>Structural Highlights</h3>
+            <ul class="tl-highlights-list">
+              <li><strong>Multi-Container Orchestration:</strong> Orchestrated stack involving distributed compute nodes, caching layers, and high-availability database clusters.</li>
+              <li><strong>Dual Integrity Auth:</strong> Professional-grade security featuring social identity verification and encrypted credential management.</li>
+              <li><strong>Automated Refinement Cycles:</strong> Periodic data harvesting, index recalibration, and automated system sanitization.</li>
+            </ul>
+
+            <div class="tl-project-cta">
+              <a href="https://cloutaesthetics.com/" class="tl-btn-primary" target="_blank" rel="noopener noreferrer">
+                Visit live site
+                <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/></svg>
+              </a>
+              <a href="../showcase.html" class="tl-btn-secondary">
+                <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M10 19l-7-7m0 0l7-7m-7 7h18"/></svg>
+                Back to showcase
+              </a>
+            </div>
+          </div>
+
+        </div>
+      </section>
+    </main>
+
+    <footer class="tl-footer">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-6 flex flex-col sm:flex-row items-center justify-between gap-2">
+        <p class="text-sm">&copy; 2025 <a href="../index.html" class="hover:text-[var(--tl-accent)] transition-colors">Trinly</a>. All Rights Reserved.</p>
+        <p class="text-sm">AI-First Technology Solutions</p>
+      </div>
+    </footer>
+
+    <button id="scroll-top" class="hidden fixed bottom-6 right-6 z-50 p-3 text-white rounded-full" aria-label="Scroll to top">
+      <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M5 15l7-7 7 7"/></svg>
+    </button>
+
+    <script src="../assets/js/app.js?v=7"></script>
+  </body>
+</html>
